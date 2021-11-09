@@ -1,3 +1,4 @@
+/* Media queries */
 $grid-breakpoints: (
     xs: 0,
     sm: 576px,
@@ -7,5 +8,16 @@ $grid-breakpoints: (
     xxl: 1500px,
 );
 
-$color-main: #1D1D1F;
-$font: "Inter", sans-serif;
+/* Fonts */
+$main-font: 'Source Sans Pro', -apple-system, system-ui, sans-sefif;
+$extra-font: Oswald, -apple-system, system-ui, sans-serif;
+
+/* Colors */
+$color-main: #212327;
+$color-mono: #2C2E32;
+$color-green: #0CCD93;
+$color-red: #F9495B;
+$color-purple: #5334EA;
+$color-midgrey: #DDDDDD;
+$color-grey: #7D7D7D;
+$color-lightgrey: #808080;
