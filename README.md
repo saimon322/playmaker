@@ -1,3 +1,3 @@
-# Tomaso/LP
+# Playmaker
 
-https://tomaso.one-pix.ru/
+https://playmaker.one-pix.ru/
