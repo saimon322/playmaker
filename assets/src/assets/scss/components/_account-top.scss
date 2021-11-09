@@ -1,0 +1,80 @@
+.top-account {
+    display: flex;
+    align-items: center;
+
+    &__info {
+        display: flex;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 8px;
+            }
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            padding: 4px 12px;
+            border-radius: 30px;
+            
+            &--notifications {
+                color: $color-main;
+                border: 1px solid rgba($color-main, 0.15);
+            }
+            
+            &--freebets {
+                color: $color-purple;
+                border: 1px solid rgba($color-purple, 0.15);
+            }
+            
+            &--stars {
+                color: $color-green;
+                border: 1px solid rgba($color-green, 0.15);
+            }
+
+            .icon {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__user {
+        margin-left: 12px;
+        display: flex;
+        align-items: center;
+
+        &-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 8px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &-login {
+            font-size: 14px;
+            max-width: 185px;
+            letter-spacing: -0.01em;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        &-icon {
+            width: 12px;
+            height: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 8px;
+            color: $color-midgrey;
+        }
+    }
+}

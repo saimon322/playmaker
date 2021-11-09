@@ -1,0 +1,29 @@
+.socials {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        width: 30px;
+        height: 30px;
+        color: $color-lightgrey;
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px $color-monowhite;
+
+        .dark & {
+            color: $color-grey;
+            box-shadow: inset 0 0 0 1px $color-mono;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        &-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.main {
+    &-nav {
+        flex: 1;
+    }
+
+    &-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-family: $extra-font;
+        font-weight: 500;
+
+        li {
+            a {
+                text-transform: uppercase;
+                color: #ffffff;
+                font-size: 14px;
+            }
+        }
+    }
+}

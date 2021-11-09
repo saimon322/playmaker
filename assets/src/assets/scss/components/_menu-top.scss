@@ -1,0 +1,19 @@
+.top {
+    &-menu {
+        display: flex;
+
+        li {
+            border-left: 1px solid $color-monowhite;
+
+            &:last-child {
+                border-right: 1px solid $color-monowhite;
+            }
+
+            a {
+                display: block;
+                letter-spacing: -0.03em;
+                padding: 9px 15px;
+            }
+        }
+    }
+}

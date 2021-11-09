@@ -1,38 +1,59 @@
 .header {
-    &__wrapper {
+    &__inner {
         display: flex;
         align-items: center;
-        grid-gap: 36px;
-        height: 102px;
+        line-height: 1.25;
     }
 
-    &__logo {
-        svg {
-            width: 264px;
-            height: 45px;
-        }
+    &__socials {
+        margin-right: 20px;
     }
 
-    &__block {
+    &__top-nav {
+        margin: 0 auto;
+    }
+
+    &__account {
+        margin-left: 20px;
+    }
+
+    &__main {
         width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        font-size: 14px;
+        font-family: $extra-font;
+        font-weight: 500;
+
+        &.dark {
+            background-color: $color-main;
+        }
     }
 
-    &__navs {
+    &__logo {
+        margin: 12.5px 20px;
+        width: 75px;
+        height: 35px;
+
+        .dark & {
+            color: #ffffff;
+        }
+    }
+    
+    &__forecasts {
+        margin-left: 8px;
+        align-self: stretch;
         display: flex;
         align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background-color: $color-purple;
+        color: #ffffff;
+        padding: 19px 20px;
 
-        a {
-            font-weight: bold;
-            padding: 14px 24px 16px;
-            border-radius: 10px;
-            transition: background-color 300ms;
-
-            &:hover {
-                background-color: #F6F6F8;
-            }
+        .icon {
+            flex-shrink: 0;
+            margin-left: 6px;
         }
     }
 }

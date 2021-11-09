@@ -9,12 +9,13 @@ $grid-breakpoints: (
 );
 
 /* Fonts */
-$main-font: 'Source Sans Pro', -apple-system, system-ui, sans-sefif;
-$extra-font: Oswald, -apple-system, system-ui, sans-serif;
+$main-font: 'Source Sans Pro', system-ui, sans-sefif;
+$extra-font: Oswald, system-ui, sans-serif;
 
 /* Colors */
 $color-main: #212327;
 $color-mono: #2C2E32;
+$color-monowhite: #F7F7F7;
 $color-green: #0CCD93;
 $color-red: #F9495B;
 $color-purple: #5334EA;
