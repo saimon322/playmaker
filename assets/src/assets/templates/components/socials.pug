@@ -1,0 +1,15 @@
+-
+    icons = [
+        {name: 'youtube', w: 16, h: 12},
+        {name: 'vk', w: 15, h: 15},
+        {name: 'facebook', w: 15, h: 15},
+        {name: 'instagram', w: 15, h: 15},
+        {name: 'twitter', w: 18, h: 16},
+        {name: 'dot', w: 16, h: 16}
+    ]
+
+ul(class="socials" + (socialsClass ? ' ' + socialsClass : ''))
+    each icon in icons
+        li.socials__item
+            a(href="#" class="socials__item-link")
+                +icon(icon.name, 'icon', icon.w, icon.h)

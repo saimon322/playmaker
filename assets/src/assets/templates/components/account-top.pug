@@ -1,0 +1,20 @@
+.top-account.header__account
+    ul.top-account__info
+        li.top-account__info-item
+            a(href="#" class="top-account__info-link top-account__info-link--notifications")
+                +icon('bell', 'icon', 16, 16)
+                | 1
+        li.top-account__info-item
+            a(href="#" class="top-account__info-link top-account__info-link--freebets")
+                +icon('freebet', 'icon', 16, 16)
+                | 730
+        li.top-account__info-item
+            a(href="#" class="top-account__info-link top-account__info-link--stars")
+                +icon('star', 'icon', 16, 16)
+                | 14
+    a(href="#" class="top-account__user js-show-account")
+        .top-account__user-avatar
+            img(src=require('@images/user.jpg'))
+        .top-account__user-login Ilya_Kozak666ovskii2212_RUS
+        .top-account__user-icon
+            +icon('angle-down', 'icon', 10, 6)
