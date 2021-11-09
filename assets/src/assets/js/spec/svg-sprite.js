@@ -5,3 +5,8 @@ import "@icons/instagram.svg";
 import "@icons/twitter.svg";
 import "@icons/vk.svg";
 import "@icons/youtube.svg";
+import "@icons/bell.svg";
+import "@icons/freebet.svg";
+import "@icons/star.svg";
+import "@icons/angle-down.svg";
+import "@icons/login.svg";
