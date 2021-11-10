@@ -1,18 +1,30 @@
 .search-form {
     font-family: $extra-font;
     font-weight: 500;
-    flex-shrink: 0;
-    max-width: 270px;
     width: 100%;
+    margin-bottom: 16px;
+    order: -1;
+
+    @include media-up(xl) {
+        order: unset;
+        margin-bottom: 0;
+        flex-shrink: 0;
+        max-width: 270px;
+    }
 
     &__input {
-        border-radius: 0;
         border: none;
         background-color: $color-mono;
         color: #ffffff;
         font-size: 14px;
         text-transform: uppercase;
-        padding: 11px 20px;
+        padding: 10px 16px;
+        border-radius: 10px;
+
+        @include media-up(xl) {
+            padding: 11px 20px;
+            border-radius: 0;
+        }
 
         &::placeholder {
             color: inherit;

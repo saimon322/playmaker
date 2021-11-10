@@ -1,0 +1,9 @@
+.page {
+    &-account {
+        padding: 24px 0;
+
+        @include media-up(md) {
+            padding: 40px 0;
+        }
+    }
+}

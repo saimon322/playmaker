@@ -2,8 +2,32 @@ extends ../layout/default
 include ../components/mixins/icon
 
 block vars
-    - pageClass = 'home'
-    - headTitle = ''
+    - pageClass = 'account'
+    - headTitle = 'Личный кабинет'
     - socialsClass = 'header__socials'
 block content
-    .container-small
+    main.main
+        .container
+            .page-account.account
+                .account-sidebar
+                    .account-info.bordered
+                        .account-avatar
+                            img(src=require('@images/user.jpg'))
+                        .account-row.row
+                            .row__item
+                                span.row__item-title Ранг
+                                span.row__item-value Expert "Playmaker"
+                            .row__item
+                                span.row__item-title Рейтинг
+                                span.row__item-value.green
+                                    +icon('star', 'icon', 15, 15)
+                                    | 14
+                            .row__item
+                                span.row__item-title Бонусный счёт
+                                span.row__item-value.blue
+                                    +icon('freebet', 'icon', 15, 15)
+                                    | 12 000
+                        h2.title.account-username Ilya_Kozak666ovskii2212_RUS
+
+                .account-content
+                    | Результаты прогнозов

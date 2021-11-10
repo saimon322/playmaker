@@ -1,20 +1,58 @@
 .main {
     &-nav {
-        flex: 1;
+        @include media-up(xl) {
+            flex: 1;
+            height: 60px;
+        }
     }
 
     &-menu {
         display: flex;
-        align-items: center;
-        justify-content: space-around;
+        flex-direction: column;
         font-family: $extra-font;
         font-weight: 500;
 
+        @include media-up(xl) {
+            flex-direction: row;
+            align-items: center;
+            //justify-content: space-around;
+            height: 100%;
+        }
+
         li {
+            margin-bottom: 24px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include media-up(xl) {
+                margin: 0;
+                height: 100%;
+            }
+
             a {
                 text-transform: uppercase;
                 color: #ffffff;
                 font-size: 14px;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: $color-purple;
+                }
+
+                @include media-up(xl) {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    padding: 18px;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: $color-purple;
+                        color: #ffffff;
+                    }
+                }
             }
         }
     }

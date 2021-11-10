@@ -10,3 +10,5 @@ import "@icons/freebet.svg";
 import "@icons/star.svg";
 import "@icons/angle-down.svg";
 import "@icons/login.svg";
+import "@icons/hamburger.svg";
+import "@icons/close.svg";

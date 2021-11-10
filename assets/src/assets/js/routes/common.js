@@ -1,6 +1,8 @@
+import headerMenu from '../utils/headerMenu';
+
 export default {
     init() {
-        console.log('common init')
+        headerMenu();
     },
     finalize() {
         console.log('common finalize')

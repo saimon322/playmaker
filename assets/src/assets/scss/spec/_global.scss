@@ -1,2 +1,35 @@
 @import "variables";
 
+.dark {
+    background-color: $color-main;
+}
+
+.title {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+
+    @include media-up(md) {
+        font-size: 20px;
+    }
+
+    @include media-up(lg) {
+        font-size: 24px;
+    }
+}
+
+.bordered {
+    border-radius: 10px;
+    border: 1px solid $color-midgrey;
+}
+
+.icon {
+
+    .green & {
+        color: $color-green;
+    }
+
+    .blue & {
+        color: $color-purple;
+    }
+}

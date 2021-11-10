@@ -8,6 +8,13 @@
         color: $color-lightgrey;
         border-radius: 50%;
         box-shadow: inset 0 0 0 1px $color-monowhite;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #ffffff;
+            background-color: $color-purple;
+            box-shadow: inset 0 0 0 1px $color-purple;
+        }
 
         .dark & {
             color: $color-grey;

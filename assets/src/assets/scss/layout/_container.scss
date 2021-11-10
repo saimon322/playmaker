@@ -6,7 +6,7 @@
     width: 100%;
 
     @include media-up(md) {
-        max-width: 1848px - (30px * 2);
+        max-width: 1292px;
     }
 
     &-small {
