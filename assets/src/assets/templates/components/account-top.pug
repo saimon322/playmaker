@@ -1,4 +1,7 @@
 .top-account.header__account
+    .row__item
+        span.row__item-title Ранг
+        span.row__item-value Expert "Playmaker"
     ul.top-account__info
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--notifications")
@@ -6,12 +9,18 @@
                 | 1
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--freebets")
+                .top-account__info-title Бонусный счёт
                 +icon('freebet', 'icon', 16, 16)
                 | 730
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--stars")
+                .top-account__info-title Рейтинг
                 +icon('star', 'icon', 16, 16)
                 | 14
+        li.top-account__info-item.top-account__info-login
+            a(href="#" class="btn btn--login")
+                +icon('login', 'icon', 12, 15)
+                | Выйти
     a(href="#" class="top-account__user js-show-account")
         .top-account__user-avatar
             img(src=require('@images/user.jpg'))

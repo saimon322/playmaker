@@ -1,54 +1,149 @@
 .top-account {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
-    &__info {
+    @include media-down(lg) {
+        padding: 16px;
+        border-radius: 10px;
+        border: 1px solid $color-grey;
+    }
+
+    .row__item {
         display: flex;
 
+        @include media-up(xl) {
+            display: none;
+        }
+    }
+
+    &__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px;
+        grid-auto-flow: dense;
+
+        @include media-up(xl) {
+            grid-gap: unset;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
         &-item {
-            &:not(:last-child) {
-                margin-right: 8px;
+            line-height: 1.5;
+            justify-self: flex-start;
+
+            &:nth-child(1) {
+                grid-row: 2;
+            }
+
+            &:nth-child(2) {
+                grid-column: 2;
+            }
+
+            @include media-up(xl) {
+
+                &:not(:last-child) {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        &-title {
+            display: block;
+            width: 100%;
+            color: $color-grey;
+
+            @include media-up(xl) {
+                display: none;
             }
         }
 
         &-link {
             display: flex;
             align-items: center;
-            padding: 4px 12px;
+            flex-wrap: wrap;
             border-radius: 30px;
-            
+            font-size: 14px;
+
+            @include media-up(xl) {
+                padding: 4px 12px;
+                font-size: 16px;
+            }
+
             &--notifications {
+                padding: 4px 12px;
                 color: $color-main;
                 border: 1px solid rgba($color-main, 0.15);
+
+                .dark & {
+                    color: #ffffff;
+                    border: 1px solid $color-midgrey;
+
+                    .icon {
+                        color: $color-midgrey;
+                    }
+                }
             }
-            
+
             &--freebets {
                 color: $color-purple;
-                border: 1px solid rgba($color-purple, 0.15);
+
+                @include media-up(xl) {
+                    border: 1px solid rgba($color-purple, 0.15);
+                }
             }
-            
+
             &--stars {
                 color: $color-green;
-                border: 1px solid rgba($color-green, 0.15);
+
+                @include media-up(xl) {
+                    border: 1px solid rgba($color-green, 0.15);
+                }
             }
 
             .icon {
                 margin-right: 5px;
             }
         }
+
+        &-login {
+            display: inline-flex;
+
+            @include media-up(xl) {
+                display: none;
+            }
+        }
     }
 
     &__user {
-        margin-left: 12px;
+        margin-bottom: 12px;
         display: flex;
         align-items: center;
+        order: -1;
+        width: 100%;
+
+        @include media-up(xl) {
+            order: unset;
+            margin-left: 12px;
+            margin-bottom: 0;
+            width: auto;
+        }
 
         &-avatar {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
             overflow: hidden;
             margin-right: 8px;
+            flex-shrink: 0;
+
+            @include media-up(xl) {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
 
             img {
                 width: 100%;
@@ -59,22 +154,36 @@
         }
 
         &-login {
-            font-size: 14px;
-            max-width: 185px;
-            letter-spacing: -0.01em;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            font-size: 16px;
+            word-break: break-word;
+
+            @include media-up(xl) {
+                word-break: normal;
+                letter-spacing: -0.01em;
+                font-size: 14px;
+                max-width: 185px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            .dark & {
+                color: #ffffff;
+            }
         }
 
         &-icon {
-            width: 12px;
-            height: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 8px;
-            color: $color-midgrey;
+            display: none;
+
+            @include media-up(xl) {
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 8px;
+                color: $color-midgrey;
+            }
         }
     }
 }

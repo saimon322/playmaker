@@ -48,6 +48,7 @@
                 transform: none;
                 opacity: 1;
                 visibility: visible;
+                overflow-y: auto;
             }
         }
 
@@ -84,6 +85,7 @@
     &__top {
         @include media-down(lg) {
             order: 1;
+            margin-top: auto;
 
             & > div {
                 padding: 0;

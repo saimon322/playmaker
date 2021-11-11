@@ -69,11 +69,19 @@
         &-title {
             font-size: 14px;
             color: $color-midgrey;
+
+            .dark & {
+                color: $color-grey;
+            }
         }
 
         &-value {
             display: flex;
             align-items: center;
+
+            .dark & {
+                color: $color-midgrey;
+            }
 
             .icon {
                 margin-right: 4px;
