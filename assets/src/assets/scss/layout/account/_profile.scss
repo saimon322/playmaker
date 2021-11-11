@@ -11,15 +11,73 @@
         @include media-up(xl) {
             margin-right: 48px;
         }
+
+        input {
+            margin-top: 4px;
+
+            &:disabled {
+                padding: 0;
+                height: auto;
+                border-radius: 0;
+                border: none;
+            }
+        }
     }
 
     &-info {
         padding: 16px;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 16px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         @include media-up(lg) {
             padding: 24px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &-actions {
+        padding: 16px;
+
+        @include media-up(lg) {
+            padding: 24px;
+        }
+
+        &__title {
+            margin-bottom: 16px;
+
+            @include media-up(lg) {
+                margin-bottom: 24px;
+            }
+        }
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                margin-bottom: 16px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @include media-up(lg) {
+                    margin-bottom: 12px;
+                }
+
+                &.save {
+                    padding: 10px 12px;
+                    color: $color-main;
+                    border-radius: 10px;
+                    border: 1px solid $color-purple;
+                }
+            }
         }
     }
 
@@ -51,6 +109,57 @@
 
     &-username {
         margin: 24px 0 12px;
+    }
+
+    &-statistics {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+
+        @include media-up(lg) {
+            margin-top: 24px;
+        }
+
+        &__output {
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
+            margin-right: 16px;
+            position: relative;
+
+            .percentage {
+                transform: rotate(-90deg);
+                animation: progress 1s ease-out forwards;
+                transform-origin: center;
+                //stroke-dasharray: 100;
+
+                &-text {
+                    font-family: $extra-font;
+                    font-weight: normal;
+                    font-size: 14px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &__total {
+            line-height: 1.5;
+
+            .delimeter {
+                margin: 0 3px;
+            }
+
+            &-title {
+                font-size: 14px;
+            }
+
+            &-value {
+                font-size: 18px;
+            }
+        }
     }
 }
 

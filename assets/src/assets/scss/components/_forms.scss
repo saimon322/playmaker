@@ -2,8 +2,21 @@
     &__input {
         padding: 11px 12px;
         height: 44px;
+        font-size: 16px;
+        font-weight: 600;
         border-radius: 10px;
         border: 1px solid $color-midgrey;
         width: 100%;
+
+        &::placeholder {
+            font-family: inherit;
+            font-weight: normal;
+            color: $color-midgrey;
+            font-size: 14px;
+        }
+
+        &.invalid {
+            border-color: $color-red;
+        }
     }
 }

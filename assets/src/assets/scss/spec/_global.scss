@@ -4,6 +4,14 @@
     background-color: $color-main;
 }
 
+.color-mono {
+    color: $color-mono;
+}
+
+.color-midgrey {
+    color: $color-midgrey;
+}
+
 .title {
     font-size: 16px;
     line-height: 1.2;
@@ -21,6 +29,14 @@
 .bordered {
     border-radius: 10px;
     border: 1px solid $color-midgrey;
+}
+
+.link {
+    color: $color-purple;
+
+    &:hover {
+        color: darken($color-purple, 15%);
+    }
 }
 
 .icon {
