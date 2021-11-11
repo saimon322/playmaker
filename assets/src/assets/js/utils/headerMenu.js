@@ -23,15 +23,15 @@ export default function () {
         menuLayout.classList.remove('active');
     }
 
-    openMenu.addEventListener('click', e => {
+    openMenu && openMenu.addEventListener('click', e => {
        e.preventDefault();
         menu.classList.add('shown');
         menuLayout.classList.add('active');
     });
 
-    closeMenu.addEventListener('click', handleCloseMenu);
-    menuLayout.addEventListener('click', handleCloseMenu);
+    closeMenu && closeMenu.addEventListener('click', handleCloseMenu);
+    menuLayout && menuLayout.addEventListener('click', handleCloseMenu);
 
-    toggleMenuClass(bp1200);
-    bp1200.onchange = toggleMenuClass;
+    menu && toggleMenuClass(bp1200);
+    bp1200.onchange = menu && toggleMenuClass;
 }
