@@ -27,8 +27,10 @@ export default function () {
             input.addEventListener(event, e => {
                 if (!input.validity.valid) {
                     !input.classList.contains('invalid') && input.classList.add('invalid');
+                    input.classList.contains('valid') && input.classList.remove('valid');
                 } else {
                     input.classList.contains('invalid') && input.classList.remove('invalid');
+                    !input.classList.contains('valid') && input.classList.add('valid');
                 }
             });
         });
@@ -38,10 +40,9 @@ export default function () {
         e.preventDefault();
 
         [...sidebarFormInputs].forEach(input => {
-            if (!input.validity.valid) {
-                !input.classList.contains('invalid') && input.classList.add('invalid');
-            } else {
-                input.classList.contains('invalid') && input.classList.remove('invalid');
+
+            if (input.validity.valid) {
+                input.classList.contains('valid') && input.classList.remove('valid');
             }
 
             if (isFieldsValid(sidebarFormInputs)) {

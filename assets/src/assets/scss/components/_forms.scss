@@ -18,5 +18,9 @@
         &.invalid {
             border-color: $color-red;
         }
+
+        &.valid {
+            border-color: $color-green;
+        }
     }
 }

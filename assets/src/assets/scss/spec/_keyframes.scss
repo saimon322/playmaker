@@ -3,3 +3,12 @@
         stroke-dasharray: 0 100;
     }
 }
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

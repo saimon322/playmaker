@@ -1,0 +1,157 @@
+.results {
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__table {
+        font-size: 14px;
+
+        &-header {
+            font-family: $extra-font;
+            color: $color-midgrey;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 12px;
+
+            @include media-up(lg) {
+                display: grid;
+                grid-template-columns: repeat(26, 1fr);
+                grid-gap: 8px;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            font-size: 12px;
+
+            @media (min-width: 1430px) {
+                font-size: 14px;
+            }
+
+            &:nth-child(1),
+            &:nth-child(4) {
+                text-align: left;
+            }
+
+            &:nth-child(1),
+            &:nth-child(2) {
+                grid-column: span 2;
+            }
+
+            &:nth-child(3) {
+                grid-column: span 11;
+            }
+
+            &:nth-child(4) {
+                grid-column: span 6;
+            }
+
+            &:nth-child(5) {
+                grid-column: span 3;
+            }
+
+            &:nth-child(6) {
+                grid-column: span 2;
+            }
+        }
+
+        &-row {
+            padding: 24px 0;
+            border-top: 1px solid $color-midgrey;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.result {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(26, 1fr);
+    grid-gap: 8px;
+    
+    &__date {
+        text-align: left;
+        color: $color-midgrey;
+    }
+
+    &__date,
+    &__tournament {
+        grid-column: span 2;
+    }
+
+    &__tournament {
+        text-align: center;
+    }
+
+    &__match {
+        grid-column: span 11;
+        display: flex;
+        align-items: flex-start;
+
+        &-team {
+            flex: 1;
+
+            &--home {
+                text-align: right;
+            }
+            
+            &--guest {
+                text-align: left;
+            }
+        }
+
+        &-score {
+            flex-shrink: 0;
+            margin: 0 12px;
+            padding: 0 5px;
+            border-radius: 3px;
+            border: 1px solid $color-midgrey;
+        }
+    }
+
+    &__output {
+        grid-column: span 11;
+
+        &-data {
+            display: grid;
+            grid-template-columns: 6fr 3fr 2fr;
+
+            &:not(:last-child) {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    
+    &__forecast {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &__factor {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__total {
+        &-sign {
+            margin: 4px auto 0;
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+
+            &--win {
+                background-color: $color-green;
+            }
+
+            &--lose {
+                background-color: $color-red;
+            }
+        }
+    }
+}
