@@ -1,19 +1,25 @@
 .results {
     &__title {
-        margin-bottom: 24px;
+        display: none;
+
+        @include media-up(md) {
+            margin-bottom: 24px;
+            display: block;
+        }
     }
 
     &__table {
         font-size: 14px;
 
         &-header {
+            display: none;
             font-family: $extra-font;
             color: $color-midgrey;
             text-transform: uppercase;
             font-weight: normal;
             margin-bottom: 12px;
 
-            @include media-up(lg) {
+            @include media-up(md) {
                 display: grid;
                 grid-template-columns: repeat(26, 1fr);
                 grid-gap: 8px;
@@ -33,13 +39,16 @@
                 text-align: left;
             }
 
-            &:nth-child(1),
-            &:nth-child(2) {
+            &:nth-child(1) {
                 grid-column: span 2;
             }
 
+            &:nth-child(2) {
+                grid-column: span 3;
+            }
+
             &:nth-child(3) {
-                grid-column: span 11;
+                grid-column: span 10;
             }
 
             &:nth-child(4) {
@@ -56,11 +65,19 @@
         }
 
         &-row {
-            padding: 24px 0;
-            border-top: 1px solid $color-midgrey;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid $color-midgrey;
 
-            &:last-child {
-                padding-bottom: 0;
+            @include media-up(md) {
+                padding: 24px 0;
+                border-radius: 0;
+                border: none;
+                border-top: 1px solid $color-midgrey;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -68,56 +85,128 @@
 
 .result {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(26, 1fr);
-    grid-gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include media-up(md) {
+        margin-bottom: 0;
+        display: grid;
+        grid-template-columns: repeat(26, 1fr);
+        grid-gap: 8px;
+    }
     
     &__date {
-        text-align: left;
         color: $color-midgrey;
+        text-align: right;
+        width: 50%;
+
+        @include media-up(md) {
+            width: auto;
+            text-align: left;
+            grid-column: span 2;
+        }
     }
 
-    &__date,
     &__tournament {
-        grid-column: span 2;
-    }
+        order: -1;
+        width: 50%;
 
-    &__tournament {
-        text-align: center;
+        @include media-up(md) {
+            width: auto;
+            order: unset;
+            text-align: center;
+            grid-column: span 3;
+        }
     }
 
     &__match {
-        grid-column: span 11;
-        display: flex;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr minmax(max-content, max-content) 1fr;
+        align-items: center;
+        grid-gap: 12px;
+        margin-bottom: 12px;
+        order: -2;
+        width: 100%;
 
         &-team {
-            flex: 1;
-
-            &--home {
+            &--guest {
                 text-align: right;
             }
-            
-            &--guest {
-                text-align: left;
+        }
+
+        @include media-up(md) {
+            display: flex;
+            grid-gap: unset;
+            order: unset;
+            grid-column: span 10;
+            align-items: flex-start;
+            margin-bottom: 0;
+
+            &-team {
+                flex: 1;
+
+                &--home {
+                    text-align: right;
+                }
+
+                &--guest {
+                    text-align: left;
+                }
             }
         }
 
         &-score {
             flex-shrink: 0;
-            margin: 0 12px;
             padding: 0 5px;
             border-radius: 3px;
             border: 1px solid $color-midgrey;
+
+            @include media-up(md) {
+                margin: 0 12px;
+            }
         }
     }
 
     &__output {
-        grid-column: span 11;
+        width: 100%;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid $color-midgrey;
+
+        @include media-up(md) {
+            grid-column: span 11;
+            padding-top: 0;
+            margin-top: 0;
+            border: none;
+        }
+
+        &-title {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-weight: 600;
+            color: $color-midgrey;
+
+            @include media-up(md) {
+                display: none;
+            }
+        }
 
         &-data {
-            display: grid;
-            grid-template-columns: 6fr 3fr 2fr;
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            @include media-up(md) {
+                width: auto;
+                display: grid;
+                grid-template-columns: 6fr 3fr 2fr;
+            }
 
             &:not(:last-child) {
                 margin-bottom: 12px;
@@ -129,17 +218,30 @@
         display: flex;
         flex-direction: column;
         text-align: left;
+        margin-right: auto;
+
+        @include media-up(md) {
+            margin-left: 0;
+        }
     }
 
     &__factor {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
+        margin-left: 12px;
+
+        @include media-up(md) {
+            margin-left: 0;
+        }
     }
 
     &__total {
+        margin-left: 12px;
+
+        @include media-up(md) {
+            margin-left: 0;
+        }
+
         &-sign {
-            margin: 4px auto 0;
+            margin: 3px auto 0;
             display: block;
             width: 12px;
             height: 12px;

@@ -85,12 +85,17 @@
 
         &__notice {
             max-width: 260px;
+            width: 100%;
             margin-top: 24px;
             color: #ffffff;
             font-size: 14px;
             padding: 7px;
             border-radius: 10px;
             background-color: #745BF0;
+
+            @include media-up(xl) {
+                max-width: none;
+            }
         }
     }
 
@@ -197,7 +202,11 @@
     }
 
     &-content {
-        flex: 1;
+        width: 100%;
+
+        @include media-up(md) {
+            flex: 1;
+        }
     }
 }
 
