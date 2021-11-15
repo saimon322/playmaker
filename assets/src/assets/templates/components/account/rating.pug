@@ -1,0 +1,28 @@
+.rating__table
+    .rating__table-header
+        .rating__table-title МЕСТО
+        .rating__table-title ПОЛЬЗОВАТЕЛЬ
+        .rating__table-title РЕЙТИНГ
+    +loop(10)
+        .rating__table-user.user
+            .user__place #{n + 1}
+            .user__info
+                .user__info-avatar
+                    img(src=require('@images/user.jpg') alt="")
+                .user__info-login Ilya_Kozak666ovskii2212_RUS
+            .user__rating
+                span.blue
+                    +icon('freebet', 'icon', 15, 15)
+                | 121 000
+.rating__user
+    .user
+        .user__place 154
+        .user__info
+            .user__info-avatar
+                img(src=require('@images/user.jpg') alt="")
+            .user__info-login Ilya_Kozak666ovskii2212_RUS
+        .user__rating
+            span.blue
+                +icon('freebet', 'icon', 15, 15)
+            | 121 000
+include ../pagination

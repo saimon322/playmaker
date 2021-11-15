@@ -1,0 +1,11 @@
+nav(class="pagination" role="navigation")
+    .nav-links
+        a(href="#" class="prev page-numbers disabled")
+            +icon('arrow-left', 'icon--arrow-left', 8, 14)
+        span.page-numbers.current 1
+        a(href="#" class="page-numbers") 2
+        span.page-numbers.dots ...
+        a(href="#" class="page-numbers") 9
+        a(href="#" class="page-numbers") 10
+        a(href="#" class="next page-numbers")
+            +icon('arrow-right', 'icon--arrow-right', 8, 14)

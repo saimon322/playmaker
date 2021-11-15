@@ -12,3 +12,5 @@ import "@icons/angle-down.svg";
 import "@icons/login.svg";
 import "@icons/hamburger.svg";
 import "@icons/close.svg";
+import "@icons/arrow-left.svg";
+import "@icons/arrow-right.svg";
