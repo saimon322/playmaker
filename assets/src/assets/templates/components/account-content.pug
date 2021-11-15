@@ -11,6 +11,26 @@ include ../components/mixins/loop
     .tabs-content.results.js-results
         .tabs-content__panel.js-tab-panel.active#statistic
             h2.title.results__title Результаты прогнозов
+            ul.results__bets
+                +loop(7)
+                    li.results__bets-item.bet
+                        .bet__info
+                            .bet__info-teams
+                                span Торпедо Нижний Новгород
+                                span Спутник Альметьевск
+                            .bet__info-date 31.02.29 16:00
+                        .bet__stats
+                            span Победитель. Осн. вр.
+                            .bet__stats-details
+                                .bet__stats-detail
+                                    span 1
+                                    span 2.65
+                                .bet__stats-detail
+                                    span X
+                                    span 2.65
+                                .bet__stats-detail
+                                    span 2
+                                    span 2.65
             .results__table
                 .results__table-header
                     .results__table-title ДАТА

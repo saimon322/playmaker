@@ -1,5 +1,15 @@
 @import "variables";
 
+body {
+    &.account {
+        background-color: #FCFCFC;
+        
+        @include media-up(md) {
+            background-color: #fff;
+        }
+    }
+}
+
 .dark {
     background-color: $color-main;
 }

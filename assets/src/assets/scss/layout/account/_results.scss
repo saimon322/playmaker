@@ -8,6 +8,14 @@
         }
     }
 
+    &__bets {
+        margin-bottom: 16px;
+
+        @include media-up(md) {
+            display: none;
+        }
+    }
+
     &__table {
         font-size: 14px;
 
@@ -88,6 +96,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 16px;
+    background-color: #fff;
 
     &:last-child {
         margin-bottom: 0;
@@ -253,6 +262,87 @@
 
             &--lose {
                 background-color: $color-red;
+            }
+        }
+    }
+}
+
+.bet {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid $color-midgrey;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    font-size: 12px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__info {
+        width: calc(52% - 8px);
+        padding-right: 8px;
+        margin-right: 8px;
+        border-right: 1px solid $color-midgrey;
+        display: flex;
+        flex-direction: column;
+
+        &-teams {
+            margin-bottom: 16px;
+
+            span {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+
+        &-date {
+            margin-top: auto;
+            color: $color-grey;
+        }
+    }
+
+    &__stats {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+
+        & > span {
+            color: $color-midgrey;
+            margin-bottom: auto;
+        }
+
+        &-details {
+            margin-top: 4px;
+            display: flex;
+        }
+
+        &-detail {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 4px;
+            border-radius: 10px;
+            border: 1px solid $color-midgrey;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            span {
+                padding: 4px 8px;
+                width: 100%;
+                text-align: center;
+
+                &:first-of-type {
+                    color: $color-grey;
+                    border-bottom: 1px solid $color-midgrey;
+                }
             }
         }
     }
