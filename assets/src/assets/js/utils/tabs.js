@@ -27,16 +27,18 @@ export default function () {
             results.contains(sidebarForm) && account.prepend(sidebarForm);
             sidebarForm.classList.contains('tabs-content__panel') && sidebarForm.classList.remove('tabs-content__panel', 'js-tab-panel', 'active');
 
-            for (let panel of tabsPanels) {
-                panel.classList.remove('active');
-            }
+            if (tabsLinks[0].classList.contains('active')) {
+                for (let panel of tabsPanels) {
+                    panel.classList.remove('active');
+                }
 
-            for (let link of tabsLinks) {
-                link.classList.remove('active');
-            }
+                for (let link of tabsLinks) {
+                    link.classList.remove('active');
+                }
 
-            tabsLinks[1].classList.add('active');
-            tabsPanels[0].classList.add('active');
+                tabsLinks[1].classList.add('active');
+                tabsPanels[0].classList.add('active');
+            }
         } else {
             account.contains(sidebarForm) && results.prepend(sidebarForm);
             !sidebarForm.classList.contains('tabs-content__panel') && sidebarForm.classList.add('tabs-content__panel', 'js-tab-panel');
