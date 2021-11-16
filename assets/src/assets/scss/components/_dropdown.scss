@@ -1,0 +1,65 @@
+.dropdown {
+    position: relative;
+    min-width: 250px;
+
+    &__trigger {
+        border-radius: 10px;
+        padding: 14px 24px;
+        background-color: #fff;
+        border: 1px solid $color-midgrey;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: color 0.3s;
+
+        &.active {
+            color: $color-midgrey;
+            border-radius: 10px 10px 0 0;
+
+            &:after {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &:after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19.7397 8.24444C20.0868 8.57036 20.0868 9.09878 19.7397 9.4247L13.2571 15.5111C12.5628 16.163 11.4372 16.163 10.7429 15.5111L4.26035 9.4247C3.91322 9.09878 3.91322 8.57036 4.26035 8.24444C4.60748 7.91852 5.17029 7.91852 5.51743 8.24444L12 14.3309L18.4826 8.24444C18.8297 7.91852 19.3925 7.91852 19.7397 8.24444Z' fill='%23DDDDDD'/%3E%3C/svg%3E");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            transition: transform 0.15s;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        background-color: $color-monowhite;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.15s;
+        border-radius: 0 0 10px 10px;
+
+        .form {
+            border: 1px solid $color-midgrey;
+            border-top: none;
+        }
+
+        &-item {
+            display: block;
+            padding: 14px 24px;
+            cursor: pointer;
+
+            input:checked + & {
+                background-color: $color-midgrey;
+            }
+        }
+    }
+}

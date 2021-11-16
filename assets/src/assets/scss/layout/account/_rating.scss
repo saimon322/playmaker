@@ -1,45 +1,58 @@
-.rating__table {
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid $color-midgrey;
+.rating {
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
 
-    &-header {
-        display: none;
-
-        @include media-up(md) {
-            display: flex;
-            padding-bottom: 12px;
+        @include media-up(lg) {
             margin-bottom: 24px;
-            border-bottom: 1px solid $color-midgrey;
-            font-weight: normal;
-            font-family: $extra-font;
-            color: $color-midgrey;
-            text-transform: uppercase;
         }
     }
 
-    &-title {
-        font-size: 14px;
-        margin-right: 20px;
+    &__table {
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $color-midgrey;
 
-        &:first-child {
-            width: 36px;
+        &-header {
+            display: none;
+
+            @include media-up(md) {
+                display: flex;
+                padding-bottom: 12px;
+                margin-bottom: 24px;
+                border-bottom: 1px solid $color-midgrey;
+                font-weight: normal;
+                font-family: $extra-font;
+                color: $color-midgrey;
+                text-transform: uppercase;
+            }
         }
 
-        &:nth-child(2) {
-            flex: 1;
+        &-title {
+            font-size: 14px;
+            margin-right: 20px;
+
+            &:first-child {
+                width: 36px;
+            }
+
+            &:nth-child(2) {
+                flex: 1;
+            }
+
+            &:last-child {
+                width: 100px;
+                margin-right: 0;
+                text-align: right;
+            }
         }
 
-        &:last-child {
-            width: 100px;
-            margin-right: 0;
-            text-align: right;
-        }
-    }
-
-    &-user {
-        &:not(:last-child) {
-            margin-bottom: 16px;
+        &-user {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
         }
     }
 }

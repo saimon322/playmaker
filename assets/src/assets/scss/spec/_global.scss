@@ -59,3 +59,13 @@ body {
         color: $color-purple;
     }
 }
+
+[type="checkbox"],
+[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    position: absolute;
+    width: 0.01em;
+    height: 0.01em;
+}

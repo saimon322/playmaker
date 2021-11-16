@@ -1,3 +1,14 @@
+.rating__header
+    .rating__form
+        h2.title Общий рейтинг
+    .dropdown
+        a(href="#" class="dropdown__trigger js-dropdown-trigger") Отображать всех
+        .dropdown__content.js-dropdown-content
+            form.form
+                input(type="radio" class="form__radio" name="sort" id="show_all" checked)
+                label(for="show_all" class="dropdown__content-item") Отображать всех
+                input(type="radio" class="form__radio" name="sort" id="show_not_all")
+                label(for="show_not_all" class="dropdown__content-item") Отображать не всех
 .rating__table
     .rating__table-header
         .rating__table-title МЕСТО
