@@ -53,7 +53,6 @@ export default function () {
             [...codeFields].forEach(field => {
                 field.classList.contains('copied') && field.classList.remove('copied');
             });
-            console.log(copyLink);
             copyLink.previousElementSibling.classList.contains('copied') && copyLink.previousElementSibling.classList.remove('copied');
         }
     });
