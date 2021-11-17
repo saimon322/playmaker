@@ -24,6 +24,12 @@
         padding-bottom: 16px;
         border-bottom: 1px solid $color-midgrey;
 
+        &.referrals {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
         &-header {
             display: none;
 

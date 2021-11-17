@@ -1,66 +1,67 @@
-.scores__header
-    h2.title.scores__title Обмен баллов на фрибеты
-    .scores__balance
-        span.row__item-title Текущий баланс
-        span.row__item-value.blue
-            +icon('freebet', 'icon', 15, 15)
-            | 12 000
-.scores__list
-    .scores__list-item.bookmaker
-        .bookmaker__column
-            span.account-subtitle Фрибет
-            span.bookmaker__column-price 1000р
-        .bookmaker__column
-            span.account-subtitle Букмекер
-            +icon('bookmaker-logo', 'icon', 100, 30)
-        .bookmaker__code.code
-            .code__field
-                .code__field-prefix FD
-                .code__field-placeholder XXXXXXXXXXXXXX
-            button(type="button" class="blue code__button") Получить за
-                +icon('star', 'icon--star', 15, 15)
-                | 1000
-    .scores__list-item.bookmaker
-        .bookmaker__column
-            span.account-subtitle Фрибет
-            span.bookmaker__column-price 1000р
-        .bookmaker__column
-            span.account-subtitle Букмекер
-            +icon('bookmaker-logo', 'icon', 100, 30)
-        .bookmaker__code.code.has-code
-            .code__field
-                .code__field-date
-                    | 09.11.2021
-                    br
-                    | 11:33
-                input(type="text" class="code__field-input" value="FDAS378F1DOZON378F1D" readonly)
-                button(type="button" class="blue code__button js-copy" title="Скопировать")
-                    +icon('copy', 'icon--copy', 20, 23)
-            .code__field
-                .code__field-date
-                    | 09.11.2021
-                    br
-                    | 11:33
-                input(type="text" class="code__field-input" value="FDAS378F1DOZON378J4E" readonly)
-                button(type="button" class="blue code__button js-copy" title="Скопировать")
-                    +icon('copy', 'icon--copy', 20, 23)
-            button(type="button" class="blue code__button") Получить ещё один код за
-                +icon('star', 'icon--star', 15, 15)
-                | 1000
-    .scores__list-item.bookmaker
-        .bookmaker__column
-            span.account-subtitle Фрибет
-            span.bookmaker__column-price 1000р
-        .bookmaker__column
-            span.account-subtitle Букмекер
-            +icon('bookmaker-logo', 'icon', 100, 30)
-        .bookmaker__code.code
-            .code__field
-                .code__field-prefix FD
-                .code__field-placeholder XXXXXXXXXXXXXX
-            button(type="button" class="blue code__button") Получить за
-                +icon('star', 'icon--star', 15, 15)
-                | 1000
-    script.
-        const codeField = document.querySelectorAll('.code__field');
-        const codeButton = document.querySelectorAll('.code__button');
+.account-content__section.scores
+    .scores__header
+        h2.title.scores__title Обмен баллов на фрибеты
+        .scores__balance
+            span.row__item-title Текущий баланс
+            span.row__item-value.blue
+                +icon('freebet', 'icon', 15, 15)
+                | 12 000
+    .scores__list
+        .scores__list-item.bookmaker
+            .bookmaker__column
+                span.account-subtitle Фрибет
+                span.bookmaker__column-price 1000р
+            .bookmaker__column
+                span.account-subtitle Букмекер
+                +icon('bookmaker-logo', 'icon', 100, 30)
+            .bookmaker__code.code
+                .code__field
+                    .code__field-prefix FD
+                    .code__field-placeholder XXXXXXXXXXXXXX
+                button(type="button" class="blue code__button") Получить за
+                    +icon('star', 'icon--star', 15, 15)
+                    | 1000
+        .scores__list-item.bookmaker
+            .bookmaker__column
+                span.account-subtitle Фрибет
+                span.bookmaker__column-price 1000р
+            .bookmaker__column
+                span.account-subtitle Букмекер
+                +icon('bookmaker-logo', 'icon', 100, 30)
+            .bookmaker__code.code.has-code
+                .code__field
+                    .code__field-date
+                        | 09.11.2021
+                        br
+                        | 11:33
+                    input(type="text" class="code__field-input" value="FDAS378F1DOZON378F1D" readonly)
+                    button(type="button" class="blue code__button js-copy" title="Скопировать")
+                        +icon('copy', 'icon--copy', 20, 23)
+                .code__field
+                    .code__field-date
+                        | 09.11.2021
+                        br
+                        | 11:33
+                    input(type="text" class="code__field-input" value="FDAS378F1DOZON378J4E" readonly)
+                    button(type="button" class="blue code__button js-copy" title="Скопировать")
+                        +icon('copy', 'icon--copy', 20, 23)
+                button(type="button" class="blue code__button") Получить ещё один код за
+                    +icon('star', 'icon--star', 15, 15)
+                    | 1000
+        .scores__list-item.bookmaker
+            .bookmaker__column
+                span.account-subtitle Фрибет
+                span.bookmaker__column-price 1000р
+            .bookmaker__column
+                span.account-subtitle Букмекер
+                +icon('bookmaker-logo', 'icon', 100, 30)
+            .bookmaker__code.code
+                .code__field
+                    .code__field-prefix FD
+                    .code__field-placeholder XXXXXXXXXXXXXX
+                button(type="button" class="blue code__button") Получить за
+                    +icon('star', 'icon--star', 15, 15)
+                    | 1000
+        script.
+            const codeField = document.querySelectorAll('.code__field');
+            const codeButton = document.querySelectorAll('.code__button');

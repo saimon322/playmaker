@@ -1,19 +1,20 @@
 export default function () {
     const copyButtons = document.getElementsByClassName('js-copy');
+    const copyLink = document.querySelector('.js-link-copy');
     const codeFields = document.getElementsByClassName('code__field-input');
 
-    const copyToClipboard = (value, fields) => {
-        value.select();
-        value.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(value.value).then(
+    const copyToClipboard = (field, value, fields) => {
+        field.type === 'text' && field.select();
+        field.type === 'text' && field.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(value).then(
             () => {
                 [...fields].forEach(field => {
                     field.classList.contains('copied') && field.classList.remove('copied');
                 });
-                !value.classList.contains('copied') && value.classList.add('copied');
+                !field.classList.contains('copied') && field.classList.add('copied');
             },
             () => {
-                value.classList.contains('copied') && value.classList.remove('copied');
+                field.classList.contains('copied') && field.classList.remove('copied');
             }
         );
     }
@@ -24,7 +25,7 @@ export default function () {
 
             if (copy.contains(e.target)) {
                 const code = copy.previousElementSibling;
-                copyToClipboard(code, codeFields);
+                copyToClipboard(code, code.value, codeFields);
             }
         }, false);
     });
@@ -33,16 +34,27 @@ export default function () {
         field.addEventListener('click', e => {
             e.preventDefault();
             if (window.innerWidth < 576) {
-                copyToClipboard(field, codeFields);
+                copyToClipboard(field, field.value, codeFields);
             }
-        });
+        }, false);
     });
 
+    copyLink.addEventListener('click', e => {
+       e.preventDefault();
+
+        if (copyLink.contains(e.target)) {
+            const code = copyLink.previousElementSibling;
+            copyToClipboard(code, code.dataset.link, codeFields);
+        }
+    }, false);
+
     document.addEventListener('click', e => {
-        if (!e.target.matches('.js-copy') && !e.target.matches('.code__field-input')) {
+        if (!e.target.matches('.js-copy') && !e.target.matches('.js-link-copy') && !e.target.matches('.code__field-input')) {
             [...codeFields].forEach(field => {
                 field.classList.contains('copied') && field.classList.remove('copied');
             });
+            console.log(copyLink);
+            copyLink.previousElementSibling.classList.contains('copied') && copyLink.previousElementSibling.classList.remove('copied');
         }
     });
 }

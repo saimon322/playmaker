@@ -1,22 +1,34 @@
-.rating__header
-    .rating__form
-        h2.title Общий рейтинг
-    .dropdown
-        a(href="#" class="dropdown__trigger js-dropdown-trigger") Отображать всех
-        .dropdown__content.js-dropdown-content
-            form.form
-                input(type="radio" class="form__radio" name="sort" id="show_all" checked)
-                label(for="show_all" class="dropdown__content-item") Отображать всех
-                input(type="radio" class="form__radio" name="sort" id="show_not_all")
-                label(for="show_not_all" class="dropdown__content-item") Отображать не всех
-.rating__table
-    .rating__table-header
-        .rating__table-title МЕСТО
-        .rating__table-title ПОЛЬЗОВАТЕЛЬ
-        .rating__table-title РЕЙТИНГ
-    +loop(10)
-        .rating__table-user.user
-            .user__place #{n + 1}
+.account-content__section.rating
+    .rating__header
+        .rating__form
+            h2.title Общий рейтинг
+        .dropdown
+            a(href="#" class="dropdown__trigger js-dropdown-trigger") Отображать всех
+            .dropdown__content.js-dropdown-content
+                form.form
+                    input(type="radio" class="form__radio" name="sort" id="show_all" checked)
+                    label(for="show_all" class="dropdown__content-item") Отображать всех
+                    input(type="radio" class="form__radio" name="sort" id="show_not_all")
+                    label(for="show_not_all" class="dropdown__content-item") Отображать не всех
+    .rating__table
+        .rating__table-header
+            .rating__table-title МЕСТО
+            .rating__table-title ПОЛЬЗОВАТЕЛЬ
+            .rating__table-title РЕЙТИНГ
+        +loop(10)
+            .rating__table-user.user
+                .user__place #{n + 1}
+                .user__info
+                    .user__info-avatar
+                        img(src=require('@images/user.jpg') alt="")
+                    .user__info-login Ilya_Kozak666ovskii2212_RUS
+                .user__rating
+                    span.blue
+                        +icon('freebet', 'icon--freebet', 15, 15)
+                    | 121 000
+    .rating__user
+        .user
+            .user__place 154
             .user__info
                 .user__info-avatar
                     img(src=require('@images/user.jpg') alt="")
@@ -25,15 +37,4 @@
                 span.blue
                     +icon('freebet', 'icon--freebet', 15, 15)
                 | 121 000
-.rating__user
-    .user
-        .user__place 154
-        .user__info
-            .user__info-avatar
-                img(src=require('@images/user.jpg') alt="")
-            .user__info-login Ilya_Kozak666ovskii2212_RUS
-        .user__rating
-            span.blue
-                +icon('freebet', 'icon--freebet', 15, 15)
-            | 121 000
-include ../pagination
+    include ../pagination

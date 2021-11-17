@@ -37,7 +37,7 @@
 
     @include media-up(lg) {
         margin-bottom: 24px;
-        padding: 24px 30px;
+        padding: 24px 36px;
         flex-wrap: nowrap;
     }
 
@@ -108,6 +108,7 @@
         padding: 11px 16px;
         border-radius: 10px;
         border: 1px solid $color-midgrey;
+        overflow: hidden;
 
         @include media-up(lg) {
             font-size: 18px;
@@ -142,6 +143,9 @@
 
         &-placeholder {
             color: $color-midgrey;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         &-date {

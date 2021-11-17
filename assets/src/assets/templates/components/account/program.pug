@@ -1,0 +1,32 @@
+.account-content__section
+    .program
+        h2.title.program__title Партнёрская программа
+        .program__link
+            p.program__link-title Ссылка для новых пользователей
+            .program__link-code.code
+                .code__field.code__field-input(data-link="playmaker24.ru/XXX-XXX-XXX-YYY")
+                    .code__field-prefix playmaker24.ru
+                    .code__field-placeholder /XXX-XXX-XXX-YYY
+                button(type="button" class="blue code__button js-link-copy" title="Скопировать")
+                    +icon('copy', 'icon--copy', 20, 23)
+        p.program__notice Вы будете получать бонусные баллы за каждого реферала. Баллы будут начисляться за:
+.account-content__section
+    .rating__header
+        h2.title Мои рефералы
+    .rating__table.referrals
+        .rating__table-header
+            .rating__table-title МЕСТО
+            .rating__table-title ПОЛЬЗОВАТЕЛЬ
+            .rating__table-title РЕЙТИНГ
+        +loop(10)
+            .rating__table-user.user
+                .user__place #{n + 1}
+                .user__info
+                    .user__info-avatar
+                        img(src=require('@images/user.jpg') alt="")
+                    .user__info-login Ilya_Kozak666ovskii2212_RUS
+                .user__rating
+                    span.blue
+                        +icon('freebet', 'icon--freebet', 15, 15)
+                    | 121 000
+    include ../pagination
