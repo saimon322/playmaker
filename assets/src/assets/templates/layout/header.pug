@@ -2,9 +2,9 @@ include ../components/mixins/icon
 header.header
     .header__mobile.dark
         button(class="header__mobile-hamburger js-open-menu")
-            +icon('hamburger', 'icon', 30, 30)
+            +icon('hamburger', 'icon--hamburger', 30, 30)
         a(href="/" class="header__mobile-logo" title="Главная")
-            +icon('logo', 'icon', 64, 30)
+            +icon('logo', 'icon--logo', 64, 30)
     .header__layout.js-layout
     .header__menu.js-menu
         .header__top
@@ -18,10 +18,10 @@ header.header
                         include ../components/account-top-logout
         .header__main.dark
             a(href="/" class="header__logo" title="Главная")
-                +icon('logo', 'icon', 75, 35)
+                +icon('logo', 'icon--logo', 75, 35)
             button(class="header__close js-close-menu")
-                +icon('close', 'icon', 36, 36)
+                +icon('close', 'icon--close', 36, 36)
             include ../components/menu-main
             include ../components/search
             a(href="#" class="header__forecasts js-show-forecasts") Прогнозы
-                +icon('angle-down', 'icon', 10, 6)
+                +icon('angle-down', 'icon--angle-down', 10, 6)
