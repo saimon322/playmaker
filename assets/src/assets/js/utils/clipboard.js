@@ -19,20 +19,30 @@ export default function () {
     }
 
     copyButtons && [...copyButtons].forEach(copy => {
-       copy.addEventListener('click', e => {
-           e.preventDefault();
+        copy.addEventListener('click', e => {
+            e.preventDefault();
 
-           if (copy.contains(e.target)) {
-               const code = copy.previousElementSibling;
-               copyToClipboard(code, codeFields);
-           }
-       }, false);
+            if (copy.contains(e.target)) {
+                const code = copy.previousElementSibling;
+                copyToClipboard(code, codeFields);
+            }
+        }, false);
     });
 
     codeFields && [...codeFields].forEach(field => {
-       field.addEventListener('click', e => {
-           e.preventDefault();
-           copyToClipboard(field, codeFields);
-       });
+        field.addEventListener('click', e => {
+            e.preventDefault();
+            if (window.innerWidth < 576) {
+                copyToClipboard(field, codeFields);
+            }
+        });
+    });
+
+    document.addEventListener('click', e => {
+        if (!e.target.matches('.js-copy') && !e.target.matches('.code__field-input')) {
+            [...codeFields].forEach(field => {
+                field.classList.contains('copied') && field.classList.remove('copied');
+            });
+        }
     });
 }
