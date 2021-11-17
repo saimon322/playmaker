@@ -6,3 +6,4 @@ $font_directory: "../../public/fonts";
 
 @include font($font_directory, 'SourceSansPro', 'SourceSansPro-Regular', 'normal', 'normal');
 @include font($font_directory, 'SourceSansPro', 'SourceSansPro-SemiBold', 600, 'normal');
+@include font($font_directory, 'SourceSansPro', 'SourceSansPro-Black', 900, 'normal');
