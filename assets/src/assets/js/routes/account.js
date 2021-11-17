@@ -2,6 +2,7 @@ import betsCounter from '../utils/betsCounter';
 import editAccount from '../utils/editAccount';
 import tabs from '../utils/tabs';
 import dropdown from '../utils/dropdown';
+import clipboard from '../utils/clipboard';
 
 export default {
     init() {
@@ -9,6 +10,7 @@ export default {
         editAccount();
         tabs();
         dropdown();
+        clipboard();
     },
     finalize() {}
 }

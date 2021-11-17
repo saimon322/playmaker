@@ -21,3 +21,193 @@
         }
     }
 }
+
+.bookmaker {
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid $color-midgrey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include media-up(lg) {
+        margin-bottom: 24px;
+        padding: 24px 30px;
+        flex-wrap: nowrap;
+    }
+
+    &__column {
+        width: calc(50% - 18px);
+
+        @include media-up(md) {
+            margin-right: 24px;
+            width: auto;
+        }
+
+        @include media-up(lg) {
+            margin-right: 36px;
+        }
+
+        span {
+            display: block;
+        }
+
+        &-price {
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 33px;
+            color: $color-purple;
+        }
+    }
+
+    &__code {
+        margin-top: 16px;
+
+        @include media-up(md) {
+            margin-top: 0;
+        }
+
+        @include media-up(lg) {
+            margin-left: auto;
+        }
+    }
+}
+
+.code {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include media-up(sm) {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    @include media-up(md) {
+        width: auto;
+    }
+
+    &.has-code {
+        flex-wrap: wrap;
+
+        @include media-up(md) {
+            max-width: 390px;
+        }
+    }
+
+    &__field {
+        background: #fff;
+        width: 100%;
+        display: flex;
+        font-size: 16px;
+        padding: 11px 16px;
+        border-radius: 10px;
+        border: 1px solid $color-midgrey;
+
+        @include media-up(lg) {
+            font-size: 18px;
+        }
+
+        .has-code & {
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            background: none;
+
+            &:not(:first-child) {
+                margin-top: 12px;
+            }
+
+            .code__button {
+                display: none;
+
+                @include media-up(sm) {
+                    display: flex;
+                    width: auto;
+                    padding: 11px;
+                    margin-left: 12px;
+                    margin-top: 0;
+
+                    .icon {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &-placeholder {
+            color: $color-midgrey;
+        }
+
+        &-date {
+            font-size: 16px;
+            margin-right: 8px;
+        }
+
+        &-input {
+            padding: 11px 16px;
+            border: 1px solid $color-midgrey;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: #fff;
+
+            @include media-up(lg) {
+                font-size: 18px;
+            }
+
+            &.copied {
+                border-color: $color-green;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        line-height: 1.4;
+        font-size: 16px;
+        padding: 11px 16px;
+        border-radius: 10px;
+        border: 1px solid $color-midgrey;
+        font-weight: 600;
+        transition: all 0.3s;
+        margin-top: 16px;
+
+        .has-code & {
+            width: 100%;
+        }
+
+        @include media-up(sm) {
+            white-space: nowrap;
+            margin-left: 12px;
+            margin-top: 0;
+
+            .has-code & {
+                margin-top: 12px;
+                margin-left: 0;
+            }
+        }
+
+        @include media-up(lg) {
+            font-size: 18px;
+        }
+
+        .icon {
+            margin-left: 8px;
+            margin-right: 4px;
+            flex-shrink: 0;
+        }
+
+        &:hover {
+            border-color: $color-purple;
+        }
+    }
+}

@@ -14,3 +14,5 @@ import "@icons/hamburger.svg";
 import "@icons/close.svg";
 import "@icons/arrow-left.svg";
 import "@icons/arrow-right.svg";
+import "@icons/bookmaker-logo.svg";
+import "@icons/copy.svg";

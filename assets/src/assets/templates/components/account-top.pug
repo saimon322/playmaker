@@ -5,32 +5,32 @@
     ul.top-account__info
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--notifications")
-                +icon('bell', 'icon', 16, 16)
+                +icon('bell', 'icon--bell', 16, 16)
                 | 1
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--freebets")
                 .top-account__info-title Бонусный счёт
-                +icon('freebet', 'icon', 16, 16)
+                +icon('freebet', 'icon--freebet', 16, 16)
                 | 730
         li.top-account__info-item
             a(href="#" class="top-account__info-link top-account__info-link--stars")
                 .top-account__info-title Рейтинг
-                +icon('star', 'icon', 16, 16)
+                +icon('star', 'icon--star', 16, 16)
                 | 14
         li.top-account__info-item.top-account__info-login
             a(href="#" class="btn btn--login")
-                +icon('login', 'icon', 12, 15)
+                +icon('login', 'icon--login', 12, 15)
                 | Выйти
     a(href="#" class="top-account__user js-show-account")
         .top-account__user-avatar
             img(src=require('@images/user.jpg'))
         .top-account__user-login Ilya_Kozak666ovskii2212_RUS
         .top-account__user-icon
-            +icon('angle-down', 'icon', 10, 6)
+            +icon('angle-down', 'icon--angle-down', 10, 6)
     .top-account__dropdown.js-dropdown
         a(href="#" class="top-account__dropdown-link")
-            +icon('login', 'icon', 12, 15)
+            +icon('login', 'icon--login', 12, 15)
             | Перейти в аккаунт
         a(href="#" class="top-account__dropdown-link")
-            +icon('login', 'icon', 12, 15)
+            +icon('login', 'icon--login', 12, 15)
             | Выйти
