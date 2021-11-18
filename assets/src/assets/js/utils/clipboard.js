@@ -3,9 +3,15 @@ export default function () {
     const copyLink = document.querySelector('.js-link-copy');
     const codeFields = document.getElementsByClassName('code__field-input');
 
-    const copyToClipboard = (field, value, fields) => {
-        field.type === 'text' && field.select();
-        field.type === 'text' && field.setSelectionRange(0, 99999);
+    if (navigator.clipboard) {
+
+        console.log('Clipboard API available');
+
+    }
+
+    function copyToClipboard(field, value, fields) {
+        if (field.type === 'text') field.select();
+        if (field.type === 'text') field.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(value).then(
             () => {
                 [...fields].forEach(field => {
@@ -40,7 +46,7 @@ export default function () {
     });
 
     copyLink.addEventListener('click', e => {
-       e.preventDefault();
+        e.preventDefault();
 
         if (copyLink.contains(e.target)) {
             const code = copyLink.previousElementSibling;
