@@ -4,12 +4,6 @@
     flex-wrap: wrap;
     position: relative;
 
-    @include media-down(lg) {
-        padding: 16px;
-        border-radius: 10px;
-        border: 1px solid $color-grey;
-    }
-
     .row__item {
         display: flex;
 
@@ -232,12 +226,21 @@
     }
 
     &__login {
-        padding: 5px 12px;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        line-height: 1.4;
-        border: 1px solid rgba($color-purple, 0.15);
+        justify-content: unset;
+        padding: 16px;
+        border-radius: 10px;
+        border: 1px solid $color-grey;
+        width: 100%;
+
+        @include media-up(xl) {
+            width: auto;
+            padding: 5px 12px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            line-height: 1.4;
+            border: 1px solid rgba($color-purple, 0.15);
+        }
 
         .icon {
             margin-right: 8px;
