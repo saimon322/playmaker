@@ -1,7 +1,19 @@
 .account {
     display: flex;
+    flex-wrap: wrap;
 
     &-content {
+        &__title {
+            display: none;
+
+            @include media-up(xl) {
+                font-size: 18px;
+                display: block;
+                margin-bottom: 24px;
+                font-weight: 600;
+            }
+        }
+
         &__section {
             margin-bottom: 16px;
 

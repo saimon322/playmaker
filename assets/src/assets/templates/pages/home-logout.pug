@@ -2,10 +2,12 @@ extends ../layout/default
 include ../components/mixins/icon
 
 block vars
-    - pageClass = 'home logout'
+    - pageClass = 'logout'
     - headTitle = ''
     - socialsClass = 'header__socials'
 block content
     main.main
         .container
-            .account-page
+            .page-account.account
+                include ../components/account-sidebar-logout
+                include ../components/account-content-logout

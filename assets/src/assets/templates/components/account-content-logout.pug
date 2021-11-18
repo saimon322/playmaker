@@ -1,0 +1,70 @@
+include ../components/mixins/loop
+
+.account-content
+    h2.account-content__title Статистика
+    .account-content__section.results
+        h2.title.results__title Результаты прогнозов
+        .results__table
+            .results__table-header
+                .results__table-title ДАТА
+                .results__table-title ТУРНИР
+                .results__table-title МАТЧ
+                .results__table-title ПРОГНОЗ
+                .results__table-title КОЭФФИЦИЕНТ
+                .results__table-title РЕЗУЛЬТАТ
+            .results__table-row.result
+                .result__date 31.02.29
+                .result__tournament РПЛ
+                .result__match
+                    .result__match-team.result__match-team--home Торпедо Нижний Новгород
+                    .result__match-score 2 : 0
+                    .result__match-team.result__match-team--guest Спутник Альметьевск
+                .result__output
+                    .result__output-data
+                        .result__forecast
+                            span Тотал: бол х2,5
+                        .result__factor
+                            span 1,75
+                        .result__total
+                            span.result__total-sign.result__total-sign--win
+            .results__table-row.result
+                .result__date 31.02.29
+                .result__tournament Лига чемпионов
+                .result__match
+                    .result__match-team.result__match-team--home ПСЖ
+                    .result__match-score 2 : 0
+                    .result__match-team.result__match-team--guest Локомотив
+                .result__output
+                    .result__output-title Прогнозы
+                    p Победитель: Локомотив
+                    .result__output-data
+                        .result__forecast
+                            span Тотал: бол х2,5
+                        .result__factor
+                            span 1,75
+                        .result__total
+                            span.result__total-sign.result__total-sign--lose
+                    .result__output-data
+                        .result__forecast
+                            span Тотал: бол х2,5
+                        .result__factor
+                            span 1,75
+                        .result__total
+                            span.result__total-sign.result__total-sign--win
+            +loop(5)
+                .results__table-row.result
+                    .result__date 31.02.29
+                    .result__tournament La Liga
+                    .result__match
+                        .result__match-team.result__match-team--home Динамо Киев
+                        .result__match-score 2 : 0
+                        .result__match-team.result__match-team--guest Барселона
+                    .result__output
+                        .result__output-title Прогнозы
+                        .result__output-data
+                            .result__forecast
+                                span Победитель: Динамо Киев
+                            .result__factor
+                                span 1,75
+                            .result__total
+                                span.result__total-sign.result__total-sign--win

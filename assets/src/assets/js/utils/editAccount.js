@@ -4,7 +4,6 @@ export default function () {
     const editAccount = document.querySelector('.js-edit-account');
     const sidebarForm = document.querySelector('.js-sidebar-form');
     const phoneFields = document.querySelectorAll('[type="tel"]');
-    const sidebarFormInputs = sidebarForm.elements;
 
     const isFieldsValid = fields => {
         return [...fields].every(field => {
@@ -22,7 +21,7 @@ export default function () {
         });
     });
 
-    [...sidebarFormInputs].forEach(input => {
+    sidebarForm && [...sidebarForm.elements].forEach(input => {
         ['input', 'change'].forEach(event => {
             input.addEventListener(event, e => {
                 if (!input.validity.valid) {
@@ -39,13 +38,13 @@ export default function () {
     editAccount && editAccount.addEventListener('click', e => {
         e.preventDefault();
 
-        [...sidebarFormInputs].forEach(input => {
+        [...sidebarForm.elements].forEach(input => {
 
             if (input.validity.valid) {
                 input.classList.contains('valid') && input.classList.remove('valid');
             }
 
-            if (isFieldsValid(sidebarFormInputs)) {
+            if (isFieldsValid(sidebarForm.elements)) {
                 input.toggleAttribute('disabled');
 
                 if (!editAccount.classList.contains('save')) {

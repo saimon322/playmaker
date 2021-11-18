@@ -1,11 +1,24 @@
 .account {
     &-sidebar {
+
+        .logout & {
+            margin-bottom: 16px;
+
+            @include media-up(lg) {
+                margin-bottom: 24px;
+            }
+        }
+
         @include media-up(xl) {
             display: block;
             max-width: 376px;
             //width: 100%;
             //flex-shrink: 0;
             margin-right: 24px;
+
+            .logout & {
+                margin-bottom: 0;
+            }
         }
 
         @media (min-width: 1430px) {
@@ -119,6 +132,10 @@
         margin-bottom: 6px;
         order: -1;
 
+        .logout & {
+            //margin-bottom: 0;
+        }
+
         @include media-up(sm) {
             width: 144px;
             height: 144px;
@@ -153,6 +170,18 @@
             flex: 1;
             margin-bottom: 0;
         }
+
+        &.mobile {
+            display: flex;
+            flex: 1;
+            margin-bottom: 0;
+            padding-top: 7px;
+            align-self: flex-start;
+
+            @include media-up(sm) {
+                display: none;
+            }
+        }
     }
 
     &-username {
@@ -173,6 +202,22 @@
             margin: 24px 0 12px;
             order: unset;
             width: auto;
+        }
+
+        .logout & {
+            order: unset;
+
+            @include media-down(xs) {
+                margin-bottom: 12px;
+            }
+
+            @include media-up(sm) {
+                order: -1;
+            }
+
+            @include media-up(xl) {
+                order: unset;
+            }
         }
     }
 
@@ -256,7 +301,24 @@
             margin-top: 12px;
         }
 
+        .top-account & {
+            margin-bottom: 12px;
+        }
+
         @include media-down(xs) {
+
+            .info & {
+                .logout & {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:last-child {
+                        margin-top: 10px;
+                    }
+                }
+            }
+
             &:not(:first-child) {
                 .info & {
                     width: calc(50% - 6px);
