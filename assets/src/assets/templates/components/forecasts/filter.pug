@@ -1,0 +1,34 @@
+-
+    sport = [
+        {icon: 'all', title: 'Все', checked: 'checked'},
+        {icon: 'football', title: 'Футбол'},
+        {icon: 'hockey', title: 'Хоккей'},
+        {icon: 'tennis', title: 'Теннис'},
+        {icon: 'basketball', title: 'Баскетбол'},
+        {icon: 'cyber', title: 'Киберспорт'},
+        {icon: 'box', title: 'Единоборства'},
+        {icon: 'etc', title: 'Другие'},
+    ]
+-
+    forecasts = [
+        {id: 'first', title: 'Название выбранного прогноза', checked: 'checked'},
+        {id: 'second', title: 'Прогнозы на АПЛ'},
+        {id: 'third', title: 'Прогнозы на Лигу Чемпионов'},
+        {id: 'fourth', title: 'Прогнозы на Лигу Чемпионов'},
+        {id: 'fifth', title: 'Прогнозы на Лигу Чемпионов'},
+        {id: 'sixth', title: 'Прогнозы на Лигу Чемпионов'}
+    ]
+
+form.forecasts-filter.filter
+    .filter__group
+        each item, id in sport
+            .filter__check.filter__check--icon
+                input(type="radio" name="sport" id="filter_" + item.icon checked= item.checked)
+                label(for="filter_" + item.icon class="filter__check-label")
+                    +icon(item.icon, 'icon--' + item.icon, 36, 36)
+                    span= item.title
+    .filter__group
+        each item in forecasts
+            .filter__check
+                input(type="radio" name="forecast" id="forecast_" + item.id checked= item.checked)
+                label(for="forecast_" + item.id class="filter__check-label")= item.title

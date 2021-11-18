@@ -1,7 +1,8 @@
 @import "variables";
 
 body {
-    &.account {
+    &.account,
+    &.forecasts {
         background-color: #FCFCFC;
         
         @include media-up(md) {
@@ -33,6 +34,14 @@ body {
 
     @include media-up(lg) {
         font-size: 24px;
+    }
+}
+
+.page {
+    padding: 24px 0;
+
+    @include media-up(md) {
+        padding: 40px 0;
     }
 }
 
