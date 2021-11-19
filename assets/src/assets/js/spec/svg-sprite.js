@@ -24,3 +24,7 @@ import "@icons/etc.svg";
 import "@icons/football.svg";
 import "@icons/hockey.svg";
 import "@icons/tennis.svg";
+import "@icons/search.svg";
+import "@icons/check.svg";
+import "@icons/chat.svg";
+import "@icons/heart.svg";
