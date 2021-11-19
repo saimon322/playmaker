@@ -2,6 +2,10 @@
     display: flex;
     flex-wrap: wrap;
 
+    @include media-up(xl) {
+        flex-wrap: nowrap;
+    }
+
     &-content {
         &__title {
             display: none;
