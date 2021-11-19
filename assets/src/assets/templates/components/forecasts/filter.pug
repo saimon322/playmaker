@@ -19,7 +19,7 @@
         {id: 'sixth', title: 'Прогнозы на Лигу Чемпионов'}
     ]
 
-form.forecasts-filter.filter
+form.form.forecasts-filter.filter
     .filter__group
         each item, id in sport
             .filter__check.filter__check--icon
@@ -32,3 +32,20 @@ form.forecasts-filter.filter
             .filter__check
                 input(type="radio" name="forecast" id="forecast_" + item.id checked= item.checked)
                 label(for="forecast_" + item.id class="filter__check-label")= item.title
+    .filter__row
+        .filter__search
+            input(type="search" class="form__input form__search" name="s" placeholder="Поиск матчей " role="search")
+            +icon('search', 'icon--search', 13, 13)
+            .custom-select.filter__search-select
+                select
+                    option(value="") Команды в матче
+                    option(value="team1") Команда 1
+                    option(value="team2") Команда 2
+        .custom-select.filter__select
+            select
+                option(value="by_team") По командам
+                option(value="by_goal") По голам
+                option(value="by_forecast") По прогнозам
+        .custom-checkbox.filter__checkbox
+            input(type="checkbox" name="actual" id="actual" checked)
+            label(for="actual") Только актуальные прогнозы
