@@ -10,9 +10,9 @@
 
         &::placeholder {
             font-family: inherit;
-            font-weight: normal;
             color: $color-midgrey;
-            font-size: 14px;
+            //font-weight: normal;
+            //font-size: 14px;
         }
 
         &.invalid {

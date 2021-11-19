@@ -90,6 +90,7 @@
             border-radius: 27px;
             border: 1px solid $color-midgrey;
             transition: all 0.3s;
+            background: #fff;
 
             .filter__check--icon & {
                 display: flex;
@@ -99,12 +100,12 @@
                 line-height: 1.5;
                 width: 114px;
                 height: 93px;
-                padding: 12px;
+                padding: 10px;
                 border-radius: 10px;
-
+                background: none;
 
                 @include media-up(lg) {
-                    width: 141px;
+                    width: 140.5px;
                     height: 92px;
                     font-size: 16px;
                     line-height: 1.25;
@@ -127,6 +128,130 @@
                     margin-top: auto;
                 }
             }
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        & > * {
+            @include media-up(lg) {
+                margin-right: 24px;
+                flex: 1;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__search {
+        position: relative;
+        width: 100%;
+        margin-bottom: 16px;
+
+        @include media-up(lg) {
+            flex: 2.7;
+            margin-bottom: 0;
+        }
+
+        .icon {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+        }
+
+        &-select {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+
+            @include media-up(md) {
+                //max-width: 140px;
+            }
+
+            select + .select-selected {
+                width: 144px;
+                padding: 4px 22px 4px 8px;
+                border: 1px solid $color-monowhite;
+                color: $color-grey;
+                font-size: 14px;
+                height: auto;
+                font-weight: normal;
+
+                @include media-up(md) {
+                    font-weight: 600;
+                    width: 150px;
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 9px;
+                    right: 8px;
+                    width: 6px;
+                    height: 12px;
+                    background-image: url('@images/search-select.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+
+            .select-items {
+                border: 1px solid $color-monowhite;
+
+                .select-item {
+                    padding: 4px 8px;
+                    font-size: 14px;
+                    font-weight: normal;
+                    color: $color-grey;
+
+                    @include media-up(md) {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    .form__search {
+        font-size: 14px;
+        padding-left: 32px;
+
+        @include media-up(md) {
+            font-size: 18px;
+            padding-left: 38px;
+        }
+    }
+
+    &__select {
+        width: 100%;
+        margin-bottom: 16px;
+
+        @include media-up(sm) {
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        @include media-up(lg) {
+            min-width: 280px;
+        }
+    }
+
+    &__checkbox {
+        @include media-up(sm) {
+            margin-left: 16px;
+        }
+
+        @include media-up(lg) {
+            margin-left: 0;
         }
     }
 }
