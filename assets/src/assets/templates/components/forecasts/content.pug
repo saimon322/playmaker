@@ -1,31 +1,103 @@
 include ../../components/mixins/loop
 
 .forecasts-content
-    .forecasts-cards.cards
-        +loop(3)
-            .card.bordered
-                .card__tags
-                    .card__tags-item Футбол
-                    .card__tags-item Прогноз Playmaker
-                .card__game
-                    .card__game-icon
-                        img(src=require('@images/team.png') alt="")
-                    .card__game-date
-                        | 20.10.2021 10:40 МСК
-                    .card__game-icon
-                        img(src=require('@images/team.png') alt="")
-                h3.card__title «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
-                .card__meta
-                    .card__meta-date 20.10.2021 10:40
-                    .card__meta-activity
-                        +icon('chat', 'icon--chat', 15, 15)
-                        | 881
-                    .card__meta-activity
-                        +icon('heart', 'icon--heart', 15, 15)
-                        | 146
-                .card__footer
-                    .card__footer-result Победа «Хетафе» с форой 0
-                    .card__footer-user Ilya_Kozak666ovsk
+    .forecasts-cards
+        .cards
+            +loop(3)
+                .card.bordered
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                        a.card__tags-item(href="#") Прогноз Playmaker
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    a(href="#" class="card__title" title="Смотреть прогноз") «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    .card__meta
+                        .card__meta-date 20.10.2021 10:40
+                        .card__meta-activity
+                            +icon('chat', 'icon--chat', 15, 15)
+                            | 881
+                        .card__meta-activity
+                            +icon('heart', 'icon--heart', 15, 15)
+                            | 146
+                    .card__footer
+                        .card__footer-result Победа «Хетафе» с форой 0
+                        .card__footer-user Ilya_Kozak666ovsk
+            +loop(3)
+                .card.bordered
+                    .card__links
+                        a.card__links-item(href="#") Футбол
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    a(href="#" class="card__title" title="Смотреть прогноз") «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    .card__meta
+                        .card__meta-date 20.10.2021 10:40
+                        .card__meta-activity
+                            +icon('chat', 'icon--chat', 15, 15)
+                            | 881
+                        .card__meta-activity
+                            +icon('heart', 'icon--heart', 15, 15)
+                            | 146
+                    .card__footer
+                        .card__footer-result Победа «Хетафе» с форой 0
+                        .card__footer-user Ilya_Kozak666ovsk
+            +loop(3)
+                .card.bordered
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    a(href="#" class="card__title" title="Смотреть прогноз") «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                    .card__meta
+                        .card__meta-date 20.10.2021 10:40
+                        .card__meta-activity
+                            +icon('chat', 'icon--chat', 15, 15)
+                            | 881
+                        .card__meta-activity
+                            +icon('heart', 'icon--heart', 15, 15)
+                            | 146
+                    .card__footer
+                        .card__footer-result Победа «Хетафе» с форой 0
+                        .card__footer-user Ilya_Kozak666ovsk
+            +loop(3)
+                .card.bordered
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                        a.card__tags-item(href="#") Прогноз Playmaker
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    a(href="#" class="card__title" title="Смотреть прогноз") «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    .card__meta
+                        .card__meta-date 20.10.2021 10:40
+                        .card__meta-activity
+                            +icon('chat', 'icon--chat', 15, 15)
+                            | 881
+                        .card__meta-activity
+                            +icon('heart', 'icon--heart', 15, 15)
+                            | 146
+                    .card__footer
+                        .card__footer-result Победа «Хетафе» с форой 0
+                        .card__footer-user Ilya_Kozak666ovsk
+        include ../pagination
     aside.forecasts-sidebar.advertise
         // Replace by widget
         div(style="border-radius: 10px; font-size: 100px; display: flex; align-items: center; justify-content: center; height: 180px; color: #fff; background: #7d7d7d; opacity: 0.08") AD
