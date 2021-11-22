@@ -1,0 +1,20 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'forecasts'
+    - headTitle = 'Список победителей'
+    - socialsClass = 'header__socials'
+block content
+    main.main
+        .page
+            .container
+                ul.forecasts-nav
+                    li(class="forecasts-nav__item")
+                        a(class="forecasts-nav__item-link" href="#") Все прогнозы
+                    li(class="forecasts-nav__item")
+                        a(class="forecasts-nav__item-link" href="#") Мои прогнозы
+                    li(class="forecasts-nav__item current")
+                        a(class="forecasts-nav__item-link" href="#") Список победителей
+                include ../components/forecasts/filter
+                include ../components/forecasts/content-winners

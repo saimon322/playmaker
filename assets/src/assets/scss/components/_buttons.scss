@@ -3,7 +3,11 @@
     align-items: center;
     justify-content: center;
     padding: 10px 12px;
+    font-weight: 600;
+    border-radius: 10px;
     font-size: 16px;
+    line-height: 1.4;
+    transition: all 0.3s;
 
     @include media-up(lg) {
         font-size: 18px;
@@ -11,6 +15,11 @@
 
     &--default {
         border: 1px solid $color-purple;
+
+        &:hover {
+            background-color: $color-purple;
+            color: #ffffff;
+        }
     }
 
     &--login {
