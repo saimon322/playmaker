@@ -9,8 +9,6 @@ export default function () {
             e.target.classList.toggle("active");
             const panel = e.target.closest('.js-accordion').querySelector('.js-accordion-panel');
 
-            console.log(panel);
-
             for (let i = 0; i < accordionBtns.length; i++) {
                 !accordionBtns[i].contains(e.target) && accordionBtns[i].classList.remove('active');
             }

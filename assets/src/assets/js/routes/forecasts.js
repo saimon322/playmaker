@@ -6,5 +6,6 @@ export default {
         select();
         accordion();
     },
-    finalize() {}
+    finalize() {
+    }
 }

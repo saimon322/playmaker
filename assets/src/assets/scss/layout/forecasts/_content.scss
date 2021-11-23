@@ -33,12 +33,17 @@
         grid-template-columns: repeat(2, 1fr);
 
         &.cards--full {
-            grid-template-columns: 1fr;
+            display: block;
         }
     }
 
     @include media-up(md) {
         grid-template-columns: repeat(3, 1fr);
+
+        &.cards--full {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
     }
 
     @include media-up(lg) {
@@ -235,14 +240,6 @@
             padding: 24px;
         }
 
-        &-header {
-            display: none;
-
-            @include media-up(md) {
-                display: flex;
-            }
-        }
-
         &-title {
             font-family: $extra-font;
             text-transform: uppercase;
@@ -251,8 +248,11 @@
         }
 
         &-row {
+            display: flex;
             font-size: 12px;
             flex-wrap: wrap;
+            align-items: center;
+            background-color: #fff;
 
             @include media-up(md) {
                 display: grid;
@@ -264,6 +264,21 @@
             @include media-up(lg) {
                 grid-template-columns: 36px 4fr 3fr 1fr 1fr;
                 font-size: 14px;
+            }
+
+            & > * {
+                &:first-child {
+                    text-align: center;
+                    color: $color-midgrey;
+                }
+
+                &:nth-last-child(2) {
+                    text-align: center;
+                }
+
+                &:last-child {
+                    text-align: right;
+                }
             }
 
             &:not(.card__table-header) {
@@ -287,20 +302,17 @@
             &:not(:first-child) {
                 border-bottom: 1px solid $color-midgrey;
             }
+        }
 
-            & > * {
-                &:first-child {
-                    text-align: center;
-                    color: $color-midgrey;
-                }
+        &-header {
+            @include media-down(sm) {
+                display: none;
+            }
+        }
 
-                &:nth-last-child(2) {
-                    text-align: center;
-                }
-
-                &:last-child {
-                    text-align: right;
-                }
+        &-place {
+            @include media-down(sm) {
+                margin-right: 8px;
             }
         }
 
@@ -309,17 +321,69 @@
             display: flex;
             align-items: center;
             word-break: break-all;
+
+            @include media-down(sm) {
+                margin-right: auto;
+            }
+        }
+
+        &-forecast {
+            @include media-down(sm) {
+                display: none;
+            }
+        }
+
+        &-data {
+            display: flex;
+            order: -1;
+            width: 100%;
+            margin-bottom: 16px;
+
+            .bet__stats {
+                @include media-up(sm) {
+                    align-items: flex-end;
+                }
+            }
+
+            @include media-up(md) {
+                display: none;
+            }
+        }
+
+        &-winner {
+            @include media-down(sm) {
+                margin-bottom: 4px;
+            }
         }
 
         &-total {
+            @include media-down(sm) {
+                display: none;
+            }
+        }
+
+        &-factor {
+            @include media-down(sm) {
+                display: none;
+            }
+        }
+
+        &-result {
             span {
-                margin-right: 12px;
+                @include media-up(md) {
+                    margin-right: 12px;
+                }
             }
         }
     }
 
     &__button {
         margin-top: 24px;
+        width: 100%;
+
+        @include media-up(sm) {
+            width: auto;
+        }
 
         &.active {
             display: none;

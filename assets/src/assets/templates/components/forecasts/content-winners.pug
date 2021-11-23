@@ -41,22 +41,41 @@ include ../../components/mixins/loop
                                         span Проигравший:
                                         |
                                         | Спутник Альметьевск
+                                .card__table-data
+                                    .bet__info
+                                        .bet__info-teams
+                                            span Торпедо Нижний Новгород
+                                            span Спутник Альметьевск
+                                        .bet__info-date 31.02.29 16:00
+                                    .bet__stats
+                                        span Победитель. Осн. вр.
+                                        .bet__stats-details
+                                            .bet__stats-detail
+                                                span 1
+                                                span 2.65
+                                            .bet__stats-detail
+                                                span X
+                                                span 2.65
+                                            .bet__stats-detail
+                                                span 2
+                                                span 2.65
                                 .card__table-factor 1,75
-                                .card__table-total
+                                .card__table-result
                                     span.result__total-sign.result__total-sign--win
                     include ../pagination
             .card.bordered.js-accordion
-                .card__tags
-                    a.card__tags-item(href="#") Футбол
-                .card__game
-                    .card__game-icon
-                        img(src=require('@images/team.png') alt="")
-                    .card__game-date
-                        | 20.10.2021 10:40 МСК
-                    .card__game-icon
-                        img(src=require('@images/team.png') alt="")
-                h3.card__title «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
-                button(class="card__button btn btn--default js-accordion-btn") Смотреть результаты
+                .card__wrapper
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    h3.card__title «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    button(class="card__button btn btn--default js-accordion-btn") Смотреть результаты
                 .card__collapse.js-accordion-panel
                     .card__table
                         .card__table-row.card__table-header
@@ -83,7 +102,7 @@ include ../../components/mixins/loop
                                         |
                                         | Спутник Альметьевск
                                 .card__table-factor 1,75
-                                .card__table-total
+                                .card__table-result
                                     span.result__total-sign.result__total-sign--win
                     include ../pagination
         include ../pagination
