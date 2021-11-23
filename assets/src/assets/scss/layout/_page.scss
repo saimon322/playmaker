@@ -1,9 +1,11 @@
 .page {
-    &-account {
-        padding: 24px 0;
+    padding: 24px 0;
 
-        @include media-up(md) {
-            padding: 40px 0;
+    @include media-up(md) {
+        padding: 40px 0;
+
+        &--single {
+            padding: 99px 0;
         }
     }
 }
