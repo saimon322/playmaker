@@ -105,6 +105,90 @@ include ../../components/mixins/loop
                                 .card__table-result
                                     span.result__total-sign.result__total-sign--win
                     include ../pagination
+            .card.bordered.js-accordion
+                .card__wrapper
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    h3.card__title «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    button(class="card__button btn btn--default js-accordion-btn") Смотреть результаты
+                .card__collapse.js-accordion-panel
+                    .card__table
+                        .card__table-row.card__table-header
+                            .card__table-title МЕСТО
+                            .card__table-title ПОЛЬЗОВАТЕЛЬ
+                            .card__table-title ПРОГНОЗ
+                            .card__table-title КОЭФФИЦИЕНТ
+                            .card__table-title РЕЗУЛЬТАТ
+                        +loop(10)
+                            .card__table-row
+                                .card__table-place= n + 1
+                                .card__table-user
+                                    .user__info-avatar
+                                        img(src=require('@images/user.jpg') alt="")
+                                    .user__info-login Ilya_Kozak666ovskii2212_RUS
+                                .card__table-forecast
+                                    .card__table-winner
+                                        span Победитель:
+                                        |
+                                        | Торпедо Нижний Новгород
+                                    .card__table-total Тотал: бол х2,5
+                                    .card__table-loser
+                                        span Проигравший:
+                                        |
+                                        | Спутник Альметьевск
+                                .card__table-factor 1,75
+                                .card__table-result
+                                    span.result__total-sign.result__total-sign--win
+                    include ../pagination
+            .card.bordered.js-accordion
+                .card__wrapper
+                    .card__tags
+                        a.card__tags-item(href="#") Футбол
+                    .card__game
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                        .card__game-date
+                            | 20.10.2021 10:40 МСК
+                        .card__game-icon
+                            img(src=require('@images/team.png') alt="")
+                    h3.card__title «Базель» — «Омония»: прогноз на матч Лиги конференций на Лиге конференций матча
+                    button(class="card__button btn btn--default js-accordion-btn") Смотреть результаты
+                .card__collapse.js-accordion-panel
+                    .card__table
+                        .card__table-row.card__table-header
+                            .card__table-title МЕСТО
+                            .card__table-title ПОЛЬЗОВАТЕЛЬ
+                            .card__table-title ПРОГНОЗ
+                            .card__table-title КОЭФФИЦИЕНТ
+                            .card__table-title РЕЗУЛЬТАТ
+                        +loop(10)
+                            .card__table-row
+                                .card__table-place= n + 1
+                                .card__table-user
+                                    .user__info-avatar
+                                        img(src=require('@images/user.jpg') alt="")
+                                    .user__info-login Ilya_Kozak666ovskii2212_RUS
+                                .card__table-forecast
+                                    .card__table-winner
+                                        span Победитель:
+                                        |
+                                        | Торпедо Нижний Новгород
+                                    .card__table-total Тотал: бол х2,5
+                                    .card__table-loser
+                                        span Проигравший:
+                                        |
+                                        | Спутник Альметьевск
+                                .card__table-factor 1,75
+                                .card__table-result
+                                    span.result__total-sign.result__total-sign--win
+                    include ../pagination
         include ../pagination
     aside.forecasts-sidebar.advertise
         // Replace by widget
