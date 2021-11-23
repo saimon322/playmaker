@@ -4,8 +4,24 @@
     @include media-up(md) {
         padding: 40px 0;
 
-        &--single {
+        &-single {
             padding: 99px 0;
         }
+    }
+
+    &-title {
+        font-family: $extra-font;
+        font-weight: normal;
+        font-size: 24px;
+
+        @include media-up(md) {
+            font-size: 40px;
+        }
+    }
+
+    &-section {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
 }

@@ -1,0 +1,11 @@
+.forecast-sidebar {
+    flex: 1;
+    max-width: 360px;
+    margin-left: 50px;
+
+    & > * {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+}

@@ -28,3 +28,4 @@ import "@icons/search.svg";
 import "@icons/check.svg";
 import "@icons/chat.svg";
 import "@icons/heart.svg";
+import "@icons/stadium.svg";
