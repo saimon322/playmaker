@@ -171,6 +171,10 @@
             margin-bottom: 0;
         }
 
+        &.info {
+            align-self: flex-start;
+        }
+
         &.mobile {
             display: flex;
             flex: 1;
