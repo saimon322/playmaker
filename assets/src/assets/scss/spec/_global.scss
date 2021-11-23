@@ -37,14 +37,6 @@ body {
     }
 }
 
-.page {
-    padding: 24px 0;
-
-    @include media-up(md) {
-        padding: 40px 0;
-    }
-}
-
 .bordered {
     border-radius: 10px;
     border: 1px solid $color-midgrey;
