@@ -1,6 +1,7 @@
 @import "mixins";
 $font_directory: "../../public/fonts";
 
+@include font($font_directory, 'Oswald', 'Oswald-Light', 300, 'normal');
 @include font($font_directory, 'Oswald', 'Oswald-Regular', 'normal', 'normal');
 @include font($font_directory, 'Oswald', 'Oswald-Medium', 500, 'normal');
 

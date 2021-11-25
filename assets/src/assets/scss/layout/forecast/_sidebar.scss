@@ -1,11 +1,16 @@
 .forecast-sidebar {
-    flex: 1;
-    max-width: 360px;
-    margin-left: 50px;
+    display: none;
 
-    & > * {
-        &:not(:last-child) {
-            margin-bottom: 50px;
+    @include media-up(xl) {
+        display: block;
+        flex: 1;
+        max-width: 360px;
+        margin-left: 50px;
+
+        & > * {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
         }
     }
 }

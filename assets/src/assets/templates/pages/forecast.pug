@@ -7,7 +7,7 @@ block vars
     - socialsClass = 'header__socials'
 block content
     main.main
-        .page-single
+        .page
             .container
                 .page-section.forecast-section
                     section.forecast
@@ -37,6 +37,10 @@ block content
                                     .forecast-info__event-place
                                         +icon('stadium', 'icon-stadium', 22, 16)
                                         | Газпром Арена, Санкт-Петербург
+                                    .forecast-info__event-factors.factors
+                                        span.factors__item 2.35
+                                        span.factors__item 5.05
+                                        span.factors__item 7.26
                                 .forecast-info__team
                                     h2 Спартак
                                     .forecast-info__team-logo
