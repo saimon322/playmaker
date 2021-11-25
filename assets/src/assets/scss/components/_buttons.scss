@@ -20,6 +20,26 @@
             background-color: $color-purple;
             color: #ffffff;
         }
+
+        &-green {
+            border: 1px solid $color-green;
+
+            &:hover {
+                background-color: $color-green;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &--blue {
+        background-color: $color-purple;
+        border: 1px solid $color-purple;
+        color: #ffffff;
+
+        &:hover {
+            border: 1px solid darken($color-purple, 10%);
+            background-color: darken($color-purple, 10%);
+        }
     }
 
     &--login {

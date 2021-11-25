@@ -1,0 +1,46 @@
+include ../../components/mixins/loop
+
+.forecast-info__content
+    .forecast-info__author
+        .forecast-info__user
+            .forecast-info__user-avatar
+                img(src=require('@images/user2.jpg') alt="")
+            .forecast-info__user-info
+                h2.forecast-info__user-name Константин Константинопольский
+                span.forecast-info__user-login Ilya_Kozak666ovskii2212_RUS
+                span.forecast-info__user-title Эксперт Playmaker
+        span.forecast-info__user-title.forecast-info__user-title--mobile Эксперт Playmaker
+        .forecast-info__buttons
+            a(href="#" class="btn btn--default") Профиль автора
+            a(href="#" class="btn btn--blue") Линия Лиги Ставок
+    .forecast-info__comment
+        .forecast-info__comment-text
+            span.forecast-info__comment-title Комментарий
+            p В кубке он разгромил два «Айнтрахта» с общим счетом 11:1 – из Нордерштедта (7:0 в гостях) и Франкфурта-на-Майне (4:1 дома). Однако в Бундеслиге рухнул вниз. В середине декабря после 12 туров он был единоличным лидером
+        .forecast-info__comment-bets
+            span.forecast-info__comment-title Прогноз
+            ul.bets.bordered
+                +loop(2)
+                    li.bets__item
+                        .bets__item-desc
+                            span.tag.bordered 6.10
+                            span Обе команды забьют - Да
+                        .bets__item-buttons
+                            button(type="button" class="btn btn--default-green") Сделать ставку
+                            button(type="button" class="btn btn--default") Сделать прогноз
+    .forecast-info__meta
+        .forecast-info__meta-item
+            +icon('chat', 'icon--chat', 16, 16)
+            | 880 комментариев
+        .forecast-info__meta-item.forecast-info__meta-likes
+            +icon('heart', 'icon--heart', 16, 16)
+            | 146 оценили
+        .forecast-info__meta-item.forecast-info__meta-takes
+            +icon('all', 'icon--all', 16, 16)
+            | 256 дублей
+            button(type="button" class="forecast-info__meta-btn js-show-takes" title="Посмотреть дубли")
+                +icon('tale', 'icon--tale', 11, 11)
+                +loop(5)
+                    .forecast-info__meta-double
+                        img(src=require('@images/user2.jpg') alt="")
+        .forecast-info__meta-item.forecast-info__meta-date 20.10.2021 10:40

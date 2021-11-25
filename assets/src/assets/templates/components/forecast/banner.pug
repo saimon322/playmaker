@@ -1,0 +1,36 @@
+.forecast-info__banner(style="background-image: url(" + require('@images/event.jpg') + ");")
+    .forecast-info__team
+        h2 Зенит
+        .forecast-info__team-logo
+            img(src=require('@images/team-1.png') alt="")
+        .forecast-info__team-series.series
+            .series__item.series__item--win В
+            .series__item.series__item--win В
+            .series__item.series__item--lose П
+            .series__item.series__item--draw Н
+            .series__item.series__item--win В
+        .forecast-info__team-result +5=3-2, 12:3, 3-е место
+    .forecast-info__event
+        .forecast-info__event-details
+            | РПЛ • 8-й тур
+            br
+            | 16 декабря 2020 • 19:00 МСК
+        .forecast-info__event-score 3-1
+        .forecast-info__event-place
+            +icon('stadium', 'icon-stadium', 22, 16)
+            | Газпром Арена, Санкт-Петербург
+        .forecast-info__event-factors.factors
+            span.factors__item 2.35
+            span.factors__item 5.05
+            span.factors__item 7.26
+    .forecast-info__team
+        h2 Спартак
+        .forecast-info__team-logo
+            img(src=require('@images/team-2.png') alt="")
+        .forecast-info__team-series.series
+            .series__item.series__item--win В
+            .series__item.series__item--win В
+            .series__item.series__item--win В
+            .series__item.series__item--draw Н
+            .series__item.series__item--win В
+        .forecast-info__team-result +5=3-2, 12:3, 3-е место
