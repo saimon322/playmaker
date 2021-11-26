@@ -30,3 +30,5 @@ import "@icons/chat.svg";
 import "@icons/heart.svg";
 import "@icons/stadium.svg";
 import "@icons/tale.svg";
+import "@icons/form.svg";
+import "@icons/whistle.svg";

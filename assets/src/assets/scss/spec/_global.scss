@@ -1,13 +1,10 @@
 @import "variables";
 
 body {
-    &.account,
-    &.forecasts {
-        background-color: #FCFCFC;
-        
-        @include media-up(md) {
-            background-color: #fff;
-        }
+    background-color: #FCFCFC;
+
+    @include media-up(md) {
+        background-color: #fff;
     }
 }
 

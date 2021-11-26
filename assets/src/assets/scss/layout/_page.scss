@@ -9,13 +9,28 @@
         }
     }
 
-    &-title {
+    &-heading {
         font-family: $extra-font;
         font-weight: normal;
         font-size: 24px;
 
         @include media-up(md) {
             font-size: 40px;
+        }
+    }
+
+    &-title {
+        font-size: 18px;
+        line-height: 1.4;
+        font-weight: 600;
+
+        @include media-up(md) {
+            //line-height: 1.2;
+            font-size: 20px;
+        }
+
+        @include media-up(lg) {
+            font-size: 24px;
         }
     }
 
