@@ -67,3 +67,53 @@ body {
     width: 0.01em;
     height: 0.01em;
 }
+
+.like,
+.cmnt {
+    font-size: 14px;
+    margin-top: 5px;
+    display: inline-flex;
+    align-items: center;
+    color: $color-grey;
+    transition: color 0.3s;
+
+    .icon {
+        margin-right: 4px;
+        color: $color-midgrey;
+        transition: color 0.3s;
+    }
+
+    &:active {
+        color: $color-main;
+    }
+}
+
+.like {
+    &:hover {
+        .icon {
+            color: $color-green;
+        }
+    }
+
+    &:active {
+        .icon {
+            color: $color-green;
+        }
+    }
+}
+
+.cmnt {
+    .like {
+        &:hover {
+            .icon {
+                color: $color-purple;
+            }
+        }
+
+        &:active {
+            .icon {
+                color: $color-purple;
+            }
+        }
+    }
+}

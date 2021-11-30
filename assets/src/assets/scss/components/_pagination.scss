@@ -44,5 +44,17 @@
         &.disabled {
             color: $color-midgrey;
         }
+
+        @include media-down(xs) {
+            .comments & {
+                width: 32px;
+                height: 32px;
+                margin-right: 5px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }

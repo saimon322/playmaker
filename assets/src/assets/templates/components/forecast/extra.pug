@@ -1,0 +1,118 @@
+h2.page-title.extra__title Другие прогнозы на этот матч
+.extra-card.bordered
+    .extra-card__author
+        .extra-card__author-image
+            img(src=require('@images/user2.jpg') alt="")
+        .extra-card__author-info
+            h3.extra-card__author-name Константин Константинопольский
+            span.extra-card__author-username Ilya_Kozak666ovskii2212_RUS
+        .extra-card__author-status
+            .row__item
+                span.row__item-title Эксперт Playmaker
+                span.row__item-value.green
+                    +icon('star', 'icon--star', 15, 15)
+                    | 14
+    .extra-card__forecast
+        span.forecast-info__comment-title Прогноз
+        ul.bets.bordered
+            li.bets__item
+                .bets__item-desc
+                    span.tag.bordered 6.10
+                    span Обе команды забьют - Да
+                .bets__item-buttons
+                    button(type="button" class="btn btn--default-green") Сделать ставку
+                    button(type="button" class="btn btn--default") Сделать прогноз
+        .forecast-info__comment-text
+            span.forecast-info__comment-title Комментарий
+            p В кубке он разгромил два «Айнтрахта» с общим счетом 11:1 – из Нордерштедта (7:0 в гостях) и Франкфурта-на-Майне (4:1 дома). Однако в Бундеслиге рухнул вниз. В середине декабря после 12 туров он был единоличным лидером
+        .forecast-info__meta
+            .forecast-info__meta-item
+                +icon('chat', 'icon--chat', 16, 16)
+                span 880
+                    |
+                    |
+                    span комментариев
+            .forecast-info__meta-item.forecast-info__meta-likes
+                +icon('heart', 'icon--heart', 16, 16)
+                span 146
+                    |
+                    |
+                    span оценили
+            .forecast-info__meta-item.forecast-info__meta-date 20.10.2021 10:40
+    .extra-card__comment.comments__section.bordered
+        form.form.comments-form
+            textarea(class="form__textarea comments-form__textarea" rows="1" placeholder="Оставить комментарий")
+            button(type="submit" class="btn btn--default comments-form__submit") Отправить
+.extra-card.bordered
+    .extra-card__author
+        .extra-card__author-image
+            img(src=require('@images/user2.jpg') alt="")
+        .extra-card__author-info
+            h3.extra-card__author-name Константин Константинопольский
+            span.extra-card__author-username Ilya_Kozak666ovskii2212_RUS
+        .extra-card__author-status
+            .row__item
+                span.row__item-title Эксперт Playmaker
+                span.row__item-value.green
+                    +icon('star', 'icon--star', 15, 15)
+                    | 14
+    .extra-card__forecast
+        span.forecast-info__comment-title Прогноз
+        ul.bets.bordered
+            li.bets__item
+                .bets__item-desc
+                    span.tag.bordered 6.10
+                    span Обе команды забьют - Да
+                .bets__item-buttons
+                    button(type="button" class="btn btn--default-green") Сделать ставку
+                    button(type="button" class="btn btn--default") Сделать прогноз
+            li.bets__item
+                .bets__item-desc
+                    span.tag.bordered 2.10
+                    span Победит Зенит
+                .bets__item-buttons
+                    button(type="button" class="btn btn--default-green") Сделать ставку
+                    button(type="button" class="btn btn--default") Сделать прогноз
+        .forecast-info__comment-text
+            span.forecast-info__comment-title Комментарий
+            p В кубке он разгромил два «Айнтрахта» с общим счетом 11:1 – из Нордерштедта (7:0 в гостях) и Франкфурта-на-Майне (4:1 дома). Однако в Бундеслиге рухнул вниз. В середине декабря после 12 туров он был единоличным лидером
+        .forecast-info__meta
+            .forecast-info__meta-item
+                +icon('chat', 'icon--chat', 16, 16)
+                span 880
+                    |
+                    |
+                    span комментариев
+            .forecast-info__meta-item.forecast-info__meta-likes
+                +icon('heart', 'icon--heart', 16, 16)
+                span 146
+                    |
+                    |
+                    span оценили
+            .forecast-info__meta-item.forecast-info__meta-date 20.10.2021 10:40
+    .extra-card__comment.comments__section.bordered
+        form.form.comments-form
+            textarea(class="form__textarea comments-form__textarea" rows="1" placeholder="Оставить комментарий")
+            button(type="submit" class="btn btn--default comments-form__submit") Отправить
+        .comments__block.js-accordion
+            .comments__count
+                span.comments__count-number 880 комментариев
+                form.form.comments__count-form
+                    .custom-select
+                        select
+                            option(value="by_date") По дате публикации
+                            option(value="by_likes") По кол-ву лайков
+                button(type="button" class="btn btn--default comments__count-button js-accordion-btn") Развернуть
+            .comments__list.card__collapse.js-accordion-panel
+                +loop(2)
+                    .comment
+                        .comment__avatar
+                            img(src=require('@images/user2.jpg') alt="")
+                        .comment__info
+                            .comment__author Константин Константинопольский
+                            .comment__meta 20.10.2021 10:40
+                            .comment__text В кубке он разгромил два «Айнтрахта» с общим счетом 11:1 – из Нордерштедта (7:0 в гостях) и Франкфурта-на-Майне (4:1 дома). Однако в Бундеслиге рухнул вниз. В середине декабря после 12 туров он был единоличным лидером (28 очков и ни одного поражения), после чего за 7 матчей набрал всего..
+                            a(href="#" class="comment__likes like")
+                                +icon('heart', 'icon--heart', 16, 16)
+                                | 146
+                include ../../components/pagination

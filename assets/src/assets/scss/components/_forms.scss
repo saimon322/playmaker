@@ -1,4 +1,6 @@
 .form {
+    font-size: 0;
+
     &__input {
         padding: 11px 12px;
         height: 44px;
@@ -24,7 +26,16 @@
         }
     }
 
-    &__radio {
+    &__textarea {
+        border: 1px solid $color-midgrey;
+        border-radius: 10px;
+        resize: none;
+        overflow: hidden;
+        transition: height 0.25s;
+        line-height: 1.4;
+    }
 
+    ::placeholder {
+        color: $color-grey;
     }
 }

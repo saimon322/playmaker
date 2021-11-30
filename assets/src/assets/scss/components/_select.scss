@@ -59,6 +59,11 @@
             padding: 14px 16px;
             cursor: pointer;
             background-color: #fff;
+            font-size: 14px;
+
+            @include media-up(md) {
+                font-size: 16px;
+            }
 
             &.selected,
             &:hover {
