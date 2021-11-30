@@ -1,0 +1,16 @@
+extends ../layout/default
+include ../components/mixins/icon
+
+block vars
+    - pageClass = 'match'
+    - headTitle = 'Матч-центр'
+    - socialsClass = 'header__socials'
+block content
+    main.main
+        .page
+            .container
+                .page-section
+                    include ../components/match/header
+                    .match-center
+                        include ../components/match/content
+                        include ../components/match/sidebar

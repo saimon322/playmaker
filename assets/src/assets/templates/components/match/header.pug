@@ -1,0 +1,18 @@
+-
+    cats = [
+        {title: 'Все', count: 54},
+        {title: 'Футбол', count: 4},
+        {title: 'Хоккей', count: 8},
+        {title: 'Теннис', count: 12},
+        {title: 'Баскетбол', count: 16},
+        {title: 'Другие', count: 0},
+    ]
+
+.match-header
+    h1.match-header__title Матч-центр
+    .match-header__categories.categories
+        each cat, id in cats
+            a(href="#" class="categories__item" + (id === 1 ? " active" : ""))= cat.title
+                |
+                |
+                span.categories__item-count= cat.count
