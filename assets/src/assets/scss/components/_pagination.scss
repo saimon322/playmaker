@@ -23,7 +23,7 @@
         width: 36px;
         height: 36px;
         border-radius: 10px;
-        border: 1px solid $color-midgrey;
+        box-shadow: inset 0 0 0 1px $color-midgrey;
         margin-right: 8px;
         background-color: #fff;
         transition: background-color 0.3s;
@@ -37,7 +37,7 @@
         }
 
         &.current {
-            border-color: $color-purple;
+            box-shadow: inset 0 0 0 1px $color-purple;
             color: $color-purple;
         }
 
@@ -46,7 +46,7 @@
         }
 
         @include media-down(xs) {
-            .comments & {
+            .comments__block & {
                 width: 32px;
                 height: 32px;
                 margin-right: 5px;

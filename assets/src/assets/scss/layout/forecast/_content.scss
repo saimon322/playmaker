@@ -1017,6 +1017,11 @@
         display: flex;
         flex-wrap: wrap;
         padding: 16px;
+        margin-bottom: 12px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
 
         @include media-up(md) {
             padding: 30px 36px 36px;

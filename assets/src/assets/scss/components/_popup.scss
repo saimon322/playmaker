@@ -1,0 +1,172 @@
+.popup {
+    display: none;
+    max-width: 460px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 16px;
+
+    @include media-up(md) {
+        padding: 16px 24px 24px;
+    }
+
+    & > .carousel__button {
+        display: none;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+
+        @include media-up(md) {
+            margin-bottom: 36px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__close {
+        display: flex;
+    }
+
+    &__date {
+        font-size: 12px;
+        color: $color-grey;
+        margin-bottom: 8px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__teams {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+        margin-bottom: 8px;
+
+        @include media-up(md) {
+            padding: 8px 24px;
+        }
+
+        & > div {
+            width: calc(50% - 6px);
+
+            @include media-down(sm) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__form {
+        &-switcher {
+            margin-bottom: 24px;
+        }
+
+        &-grid {
+            margin-bottom: 24px;
+        }
+
+        &-textarea {
+            padding: 10px 16px;
+            margin-bottom: 24px;
+        }
+
+        &-submit {
+            width: 100%;
+        }
+    }
+}
+
+.grid {
+    font-size: 16px;
+
+    @include media-up(sm) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media-up(sm) {
+            margin-bottom: 0;
+            width: calc(50% - 6px);
+
+            &:nth-child(n + 3) {
+                margin-top: 12px;
+            }
+        }
+
+        &-title {
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        &-factors {
+            display: flex;
+            justify-content: space-between;
+
+            .factor {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 14px;
+
+                @include media-down(xs) {
+                    width: calc(33.33% - (32px / 3));
+                }
+
+                span {
+                    display: inline-block;
+                    font-weight: normal;
+                    margin-bottom: 5px;
+                    color: $color-midgrey;
+                }
+
+                input {
+                    &:checked {
+                        & + label {
+                            border-color: $color-green;
+                            background-color: $color-green;
+                            color: #ffffff;
+                        }
+                    }
+                }
+
+                label {
+                    padding: 8px 12px;
+                    cursor: pointer;
+                    text-align: center;
+                    width: 100%;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        border-color: $color-green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fancybox {
+    &__backdrop {
+        --fancybox-bg: rgba(33, 35, 39, 0.15);
+    }
+
+    &__content {
+        :focus:not(.carousel__button.is-close) {
+            outline: none;
+        }
+    }
+}

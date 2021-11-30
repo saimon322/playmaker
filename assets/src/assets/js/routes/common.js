@@ -5,6 +5,7 @@ import scroll from '../utils/scroll';
 import form from '../utils/form';
 import accordion from "../utils/accordion";
 import select from "../utils/select";
+import fancyapps from "../utils/fancyapps";
 
 export default {
     init() {
@@ -15,6 +16,7 @@ export default {
         form();
         accordion();
         select();
+        fancyapps();
     },
     finalize() {}
 }

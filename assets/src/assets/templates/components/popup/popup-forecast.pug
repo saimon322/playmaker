@@ -1,0 +1,49 @@
+-
+    sections = [
+        {id: 'win', title: 'Победитель'},
+        {id: 'double', title: 'Двойной шанс'},
+        {id: 'handicap', title: 'Фора'},
+        {id: 'total', title: 'Тотал'},
+        {id: 'k1', title: 'Инд. Тотал К1'},
+        {id: 'k2', title: 'Инд. Тотал К2'}
+    ]
+
+.popup#forecast
+    .popup__header
+        span.popup__title Сделать прогноз
+        button(class="popup__close js-close-popup" title="Закрыть")
+            +icon('popup-close', 'icon--popup-close', 20, 20)
+    .popup__body
+        .popup__date 01 НОЯ 23:00
+        .popup__teams.bordered
+            .forecast-description__meeting-team
+                .table__logo
+                    img(src=require('@images/team-1.png') alt="")
+                | Зенит
+            .forecast-description__meeting-team
+                .table__logo
+                    img(src=require('@images/team-2.png') alt="")
+                | Спартак
+        form.form.popup__form
+            .popup__form-switcher.switcher
+                input(type="checkbox" class="switcher__input" name="duplicate" id="duplicate")
+                label(for="duplicate" class="switcher__label") Дублировать прогноз автора
+            .popup__form-grid.grid
+                each item in sections
+                    .grid__item.bordered
+                        span.grid__item-title= item.title
+                        .grid__item-factors
+                            .factor
+                                span П1
+                                input(type="radio" class="grid__input" name=item.id id=item.id + '_1')
+                                label(for=item.id + '_1' class="grid__label bordered") 6.10
+                            .factor
+                                span П2
+                                input(type="radio" class="grid__input" name=item.id id=item.id + '_2')
+                                label(for=item.id + '_2' class="grid__label bordered") 6.10
+                            .factor
+                                span П3
+                                input(type="radio" class="grid__input" name=item.id id=item.id + '_3')
+                                label(for=item.id + '_3' class="grid__label bordered") 6.10
+            textarea(class="popup__form-textarea form__textarea" rows="5" placeholder="Ваш комментарий к прогнозу")
+            button(type="submit" class="btn btn--blue popup__form-submit") Опубликовать
