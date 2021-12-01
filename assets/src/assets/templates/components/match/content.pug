@@ -1,3 +1,5 @@
+include ../../components/mixins/loop
+
 .match-center__content
     .match-center__top
         .match-center__top-title Футбол
@@ -8,3 +10,163 @@
             .match-center__league-country
                 img(src=require('@images/flag.jpg') alt="")
             span.match-center__league-name РПЛ
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams Реал Нереал Мадрид - Спартак Москва
+                a.match-center__broadcast(href="#" title="Трансляция")
+                    +icon('video', 'icon--video', 24, 24)
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--new 01 НОЯ 23:00
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--live Идёт 94 мин
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--finish Окончен
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+                a.match-center__broadcast(href="#" title="Трансляция")
+                    +icon('video', 'icon--video', 24, 24)
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--cancel Отменён
+
+        +loop(4)
+            .match-center__row
+                .match-center__game
+                    .match-center__date
+                        .match-center__date-desktop 17:30
+                        .match-center__date-mobile 01 НОЯ 23:00
+                    .match-center__teams ЦСКА - Спартак Москва
+                    a.match-center__broadcast(href="#" title="Трансляция")
+                        +icon('video', 'icon--video', 24, 24)
+                button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+                a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+                .match-center__factors
+                    .match-center__factors-item.bordered 6.10
+                    .match-center__factors-item.bordered 6.10
+                    .match-center__factors-item.bordered 6.10
+                .match-center__status.match-center__status--live Идёт 94 мин
+
+    .match-center__section
+        .match-center__league
+            .match-center__league-country
+                img(src=require('@images/flag.jpg') alt="")
+            span.match-center__league-name РПЛ
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams Реал Нереал Мадрид - Спартак Москва
+                a.match-center__broadcast(href="#" title="Трансляция")
+                    +icon('video', 'icon--video', 24, 24)
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--new 01 НОЯ 23:00
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--live Идёт 94 мин
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--finish Окончен
+
+        .match-center__row
+            .match-center__game
+                .match-center__date
+                    .match-center__date-desktop 17:30
+                    .match-center__date-mobile 01 НОЯ 23:00
+                .match-center__teams ЦСКА - Спартак Москва
+                a.match-center__broadcast(href="#" title="Трансляция")
+                    +icon('video', 'icon--video', 24, 24)
+            button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+            a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+            .match-center__factors
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+                .match-center__factors-item.bordered 6.10
+            .match-center__status.match-center__status--cancel Отменён
+
+        +loop(4)
+            .match-center__row
+                .match-center__game
+                    .match-center__date
+                        .match-center__date-desktop 17:30
+                        .match-center__date-mobile 01 НОЯ 23:00
+                    .match-center__teams ЦСКА - Спартак Москва
+                    a.match-center__broadcast(href="#" title="Трансляция")
+                        +icon('video', 'icon--video', 24, 24)
+                button(type="button" class="match-center__btn match-center__bet btn btn--default-green js-match-bet") Ставка
+                a(href="#" class="match-center__btn match-center__forecasts btn btn--default") Прогнозы
+                .match-center__factors
+                    .match-center__factors-item.bordered 6.10
+                    .match-center__factors-item.bordered 6.10
+                    .match-center__factors-item.bordered 6.10
+                .match-center__status.match-center__status--live Идёт 94 мин
