@@ -28,9 +28,6 @@
         .top-account__user-icon
             +icon('angle-down', 'icon--angle-down', 10, 6)
     .top-account__dropdown.js-dropdown
-        a(href="#login-popup" data-fancybox class="top-account__dropdown-link")
-            +icon('login', 'icon--login', 12, 15)
-            | Перейти в аккаунт
-        a(href="#thanx-popup" data-fancybox class="top-account__dropdown-link")
-            +icon('login', 'icon--login', 12, 15)
-            | Выйти
+        a(href="#login-popup" data-fancybox class="top-account__dropdown-link") Перейти в профиль
+        a(href="#" class="top-account__dropdown-link") Настройки
+        a(href="#thanx-popup" data-fancybox class="top-account__dropdown-link") Выйти из профиля
