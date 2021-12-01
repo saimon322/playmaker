@@ -33,3 +33,4 @@ import "@icons/tale.svg";
 import "@icons/form.svg";
 import "@icons/whistle.svg";
 import "@icons/popup-close.svg";
+import "@icons/video.svg";
