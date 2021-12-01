@@ -45,8 +45,11 @@
 
     &-center {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+
+        @include media-up(xl) {
+            display: flex;
+            align-items: flex-start;
+        }
 
         &__sidebar {
             display: none;
