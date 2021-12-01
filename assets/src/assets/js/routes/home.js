@@ -1,8 +1,8 @@
 export default {
     init() {
-        console.log('home init')
+        console.log();
     },
     finalize() {
-        console.log('home finalize')
+        console.log();
     }
 }

@@ -5,8 +5,16 @@
     border-radius: 10px;
     padding: 16px;
 
+    &.login {
+        max-width: 320px;
+    }
+
     @include media-up(md) {
         padding: 16px 24px 24px;
+
+        .login & {
+            padding: 16px;
+        }
     }
 
     & > .carousel__button {
@@ -19,13 +27,25 @@
         justify-content: space-between;
         margin-bottom: 24px;
 
+        .login.forgot & {
+            margin-bottom: 12px;
+        }
+
         @include media-up(md) {
             margin-bottom: 36px;
+
+            .login & {
+                margin-bottom: 24px;
+            }
         }
     }
 
     &__title {
         font-size: 24px;
+
+        .login & {
+            font-size: 18px;
+        }
     }
 
     &__close {

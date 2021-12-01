@@ -1,0 +1,127 @@
+.login {
+    &-tabs {
+        display: flex;
+        margin-bottom: 24px;
+
+        &__link {
+            width: 50%;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: $extra-font;
+            font-weight: normal;
+            font-size: 18px;
+            padding-bottom: 8px;
+            color: $color-grey;
+            border-bottom: 2px solid $color-midgrey;
+            transition: all 0.3s;
+
+            &.active {
+                border-color: $color-purple;
+                color: $color-purple;
+            }
+        }
+    }
+
+    &-panel {
+        display: none;
+        animation: fadeEffect 1s;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+
+        &__row {
+            margin-bottom: 24px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__input {
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &__link {
+            font-size: 14px;
+            font-weight: normal;
+            margin-left: auto;
+        }
+
+        &__submit {
+            width: 100%;
+        }
+
+        &__else {
+            display: block;
+            margin: 24px auto;
+            text-transform: uppercase;
+            font-size: 16px;
+            padding: 0 8px;
+            background-color: #fff;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                height: 1px;
+                top: 50%;
+                width: 100%;
+                background-color: $color-midgrey;
+            }
+
+            &:before {
+                right: 100%;
+            }
+
+            &:after {
+                left: 100%;
+            }
+        }
+
+        &__accounts {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__notice {
+            font-size: 12px;
+            margin-top: 16px;
+            font-weight: normal;
+            color: $color-grey;
+
+            a {
+                color: $color-purple;
+
+                &:hover {
+                    color: darken($color-purple, 15%);
+                }
+            }
+        }
+    }
+}
+
+.forgot-form {
+    &__desc {
+        font-size: 14px;
+        color: $color-grey;
+        margin-bottom: 24px;
+        font-weight: normal;
+
+        a {
+            color: $color-purple;
+
+            &:hover {
+                color: darken($color-purple, 15%);
+            }
+        }
+    }
+}

@@ -21,20 +21,6 @@ export default function () {
         });
     });
 
-    sidebarForm && [...sidebarForm.elements].forEach(input => {
-        ['input', 'change'].forEach(event => {
-            input.addEventListener(event, e => {
-                if (!input.validity.valid) {
-                    !input.classList.contains('invalid') && input.classList.add('invalid');
-                    input.classList.contains('valid') && input.classList.remove('valid');
-                } else {
-                    input.classList.contains('invalid') && input.classList.remove('invalid');
-                    !input.classList.contains('valid') && input.classList.add('valid');
-                }
-            });
-        });
-    });
-
     editAccount && editAccount.addEventListener('click', e => {
         e.preventDefault();
 

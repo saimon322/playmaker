@@ -5,7 +5,8 @@ import scroll from '../utils/scroll';
 import form from '../utils/form';
 import accordion from "../utils/accordion";
 import select from "../utils/select";
-import fancyapps from "../utils/fancyapps";
+import fancyApps from "../utils/fancyapps";
+import tabsPopup from "../utils/tabsPopup";
 
 export default {
     init() {
@@ -16,7 +17,8 @@ export default {
         form();
         accordion();
         select();
-        fancyapps();
+        fancyApps();
+        tabsPopup();
     },
     finalize() {}
 }

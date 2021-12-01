@@ -1,0 +1,9 @@
+.popup.login.forgot#thanx-popup
+    .popup__header
+        span.popup__title Личный кабинет
+        button(class="popup__close js-close-popup" title="Закрыть")
+            +icon('popup-close', 'icon--popup-close', 20, 20)
+    .popup__body
+        form.form.forgot-form
+            .forgot-form__desc Спасибо за регистрацию! Для подтверждения вашего аккаунта на почту adwice@gmail.com будет отправлено письмо с подтверждением
+            button(type="button" class="btn btn--blue login-form__submit js-close-popup") Отлично

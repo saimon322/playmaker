@@ -1,0 +1,11 @@
+.popup.login.forgot#forgot-popup
+    .popup__header
+        span.popup__title Личный кабинет
+        button(class="popup__close js-close-popup" title="Закрыть")
+            +icon('popup-close', 'icon--popup-close', 20, 20)
+    .popup__body
+        form.form.forgot-form
+            .forgot-form__desc Для восстановления пароля введите текущий адрес, используемый при регистрации аккаунта
+            .login-form__row
+                input(type="text" class="form__input" placeholder="Логин/E-mail" required)
+            button(type="submit" class="btn btn--blue login-form__submit") Войти

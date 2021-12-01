@@ -101,7 +101,8 @@ h2.page-title.extra__title Другие прогнозы на этот матч
                     .custom-select
                         select
                             option(value="by_date") По дате публикации
-                            option(value="by_likes") По кол-ву лайков
+                            option(value="by_rating") По рейтингу
+                            option(value="by_comments") Обсуждаемые
                 button(type="button" class="btn btn--default comments__count-button js-accordion-btn") Развернуть
             .comments__list.card__collapse.js-accordion-panel
                 +loop(2)

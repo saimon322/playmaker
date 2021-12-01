@@ -1,0 +1,52 @@
+.popup.login#login-popup
+    .popup__header
+        span.popup__title Личный кабинет
+        button(class="popup__close js-close-popup" title="Закрыть")
+            +icon('popup-close', 'icon--popup-close', 20, 20)
+    .popup__body
+        .login-tabs
+            a(href="#login-tab" class="login-tabs__link active js-login-tab") вход
+            a(href="#register-tab" class="login-tabs__link js-login-tab") регистрация
+        .login-panels
+            .login-panel.js-login-panel.active#login-tab
+                form.form.login-form
+                    .login-form__row
+                        input(type="text" class="form__input login-form__input" placeholder="Логин или E-mail" required)
+                        input(type="password" class="form__input login-form__input" placeholder="Пароль" minlength="8" required)
+                    .login-form__row
+                        .custom-checkbox
+                            input(type="checkbox" name="remember" id="remember")
+                            label(for="remember") Запомнить меня
+                        a(href="#forgot-popup" data-fancybox class="link login-form__link") Забыли пароль?
+                    button(type="submit" class="btn btn--blue login-form__submit") Войти
+                    span.login-form__else или войти через
+                    .login-form__accounts
+                        a(href="#" class="login-form__accounts-link" title="Facebook")
+                            +icon('fb', 'icon--fb', 40, 40)
+                        a(href="#" class="login-form__accounts-link" title="VKontakte")
+                            +icon('vk', 'icon--vk', 40, 40)
+                        a(href="#" class="login-form__accounts-link" title="Twitter")
+                            +icon('tw', 'icon--tw', 40, 40)
+                        a(href="#" class="login-form__accounts-link" title="Google")
+                            +icon('gg', 'icon--gg', 40, 40)
+                        a(href="#" class="login-form__accounts-link" title="Yandex")
+                            +icon('ya', 'icon--ya', 40, 40)
+            .login-panel.js-login-panel#register-tab
+                form.form.login-form
+                    .login-form__row
+                        input(type="text" class="form__input login-form__input" placeholder="Логин" required)
+                        input(type="email" class="form__input login-form__input" placeholder="E-mail" required)
+                        input(type="password" class="form__input login-form__input" placeholder="Пароль" minlength="8" required)
+                        input(type="text" class="form__input login-form__input" placeholder="Реферальный код")
+                    button(type="submit" class="btn btn--blue login-form__submit") Зарегистрироваться
+                    .login-form__notice
+                        | Регистрируясь на сайте, вы принимаете условия
+                        |
+                        a(href="#") политики конфиденциальности
+                        | ,
+                        |
+                        a(href="#") политики обработки персональных данных
+                        |
+                        | и
+                        |
+                        a(href="#") правил конкурса
