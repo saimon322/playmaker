@@ -1,6 +1,16 @@
+-
+    pieChart = [
+        {size: 35, color: "#0CCD93", title: "Лайк"},
+        {size: 15, color: "#3592E8", title: "Поделиться в соцсетях"},
+        {size: 7, color: "#5334EA", title: "Прогноз"},
+        {size: 22, color: "#FBBC04", title: "Дубль"},
+        {size: 21, color: "#F9495B", title: "Комментарий"},
+    ]
+
 .account-content__section
     .program
         h2.title.program__title Партнёрская программа
+        p.program__notice Вы будете получать бонусные баллы за каждого реферала
         .program__link
             p.program__link-title Ссылка для новых пользователей
             .program__link-code.code
@@ -9,7 +19,25 @@
                     .code__field-placeholder /XXX-XXX-XXX-YYY
                 button(type="button" class="blue code__button js-link-copy" title="Скопировать")
                     +icon('copy', 'icon--copy', 20, 23)
-        p.program__notice Вы будете получать бонусные баллы за каждого реферала. Баллы будут начисляться за:
+        .program__scores.scores
+            h2.title.program__title Полученные баллы
+            p.program__notice Сколько баллов начислено за совершённые действия
+            .scores-chart
+                .scores-chart__pie
+                    pie-chart(stroke-width="80" pull="-270")
+                        each peace in pieChart
+                            slice(size=peace.size stroke=peace.color)
+                    .scores-chart__pie-text
+                        span.js-scores 6202
+                        | балла
+                .scores-chart__legend
+                    each legend in pieChart
+                        .legend
+                            span.legend__color(style="background-color:" + legend.color)
+                            .legend__name= legend.title
+                                |
+                                |
+                                span.legend__size / #{legend.size}%
 .account-content__section
     .rating__header
         h2.title Мои рефералы
