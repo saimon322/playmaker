@@ -11,6 +11,10 @@
 
         @include media-up(md) {
             justify-content: unset;
+
+            .popup & {
+                justify-content: center;
+            }
         }
     }
 

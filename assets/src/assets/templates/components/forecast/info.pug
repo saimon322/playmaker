@@ -38,7 +38,7 @@ include ../../components/mixins/loop
         .forecast-info__meta-item.forecast-info__meta-takes
             +icon('all', 'icon--all', 16, 16)
             | 256 дублей
-            button(type="button" class="forecast-info__meta-btn js-show-takes" title="Посмотреть дубли")
+            button(type="button" class="forecast-info__meta-btn" data-fancybox data-src="#takes-popup" title="Посмотреть дубли")
                 +icon('tale', 'icon--tale', 11, 11)
                 +loop(5)
                     .forecast-info__meta-double

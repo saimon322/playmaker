@@ -185,6 +185,12 @@
             display: flex;
             align-items: center;
 
+            .takes & {
+                &:not(:last-child) {
+                    margin-bottom: 24px;
+                }
+            }
+
             &-avatar {
                 width: 60px;
                 height: 60px;

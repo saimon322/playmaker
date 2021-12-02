@@ -1,0 +1,16 @@
+.popup.takes#takes-popup
+    .popup__header
+        span.popup__title Дубли на прогноз
+        button(class="popup__close js-close-popup" title="Закрыть")
+            +icon('popup-close', 'icon--popup-close', 20, 20)
+    .popup__body
+        .takes
+            +loop(8)
+                .forecast-info__user
+                    a.forecast-info__user-avatar(href="#" title="Константин Константинопольский")
+                        img(src=require('@images/user2.jpg') alt="")
+                    .forecast-info__user-info
+                        h2.forecast-info__user-name Константин Константинопольский
+                        span.forecast-info__user-login Ilya_Kozak666ovskii2212_RUS
+                        span.forecast-info__user-title Эксперт Playmaker
+        include ../../components/pagination
