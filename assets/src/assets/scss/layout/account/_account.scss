@@ -2,8 +2,17 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include media-up(xl) {
-        flex-wrap: nowrap;
+    .page {
+        @include media-up(xl) {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            grid-gap: 24px;
+        }
+
+        @media (min-width: 1430px) {
+            grid-template-columns: 376px 1fr;
+            grid-gap: 48px;
+        }
     }
 
     &-content {
@@ -29,6 +38,10 @@
                 margin-bottom: 24px;
                 border: 1px solid $color-midgrey;
                 border-radius: 10px;
+                padding: 16px;
+            }
+
+            @media (min-width: 1430px) {
                 padding: 24px;
             }
         }

@@ -11,10 +11,10 @@
 
         @include media-up(xl) {
             display: block;
-            max-width: 376px;
+            //max-width: 376px;
             //width: 100%;
             //flex-shrink: 0;
-            margin-right: 24px;
+            //margin-right: 24px;
 
             .logout & {
                 margin-bottom: 0;
@@ -22,7 +22,7 @@
         }
 
         @media (min-width: 1430px) {
-            margin-right: 48px;
+            //margin-right: 48px;
         }
 
         input {
@@ -101,9 +101,9 @@
 
                 &.save {
                     padding: 10px 12px;
-                    color: #fff;
+                    color: $color-main;
                     border-radius: 10px;
-                    background-color: $color-purple;
+                    border: 1px solid $color-purple;
                 }
             }
         }
@@ -146,8 +146,15 @@
         }
 
         @include media-up(xl) {
+            width: 100px;
+            height: 100px;
             margin-bottom: 0;
             order: unset;
+        }
+
+        @media (min-width: 1430px) {
+            width: 144px;
+            height: 144px;
         }
 
         img {
@@ -363,6 +370,29 @@
             .icon {
                 margin-right: 4px;
             }
+        }
+    }
+}
+
+.logout {
+    .page {
+        @include media-up(xl) {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            grid-gap: 24px;
+        }
+
+        @media (min-width: 1430px) {
+            grid-template-columns: 376px 1fr;
+            grid-gap: 48px;
+        }
+    }
+}
+
+.advertise {
+    & > div {
+        &:not(:last-child) {
+            margin-bottom: 24px;
         }
     }
 }

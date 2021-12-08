@@ -2,9 +2,13 @@
     position: relative;
     min-width: 250px;
 
+    @include media-down(xs) {
+        width: 100%;
+    }
+
     &__trigger {
         border-radius: 10px;
-        padding: 14px 24px;
+        padding: 8px 12px;
         background-color: #fff;
         border: 1px solid $color-midgrey;
         display: flex;
@@ -55,8 +59,9 @@
 
         &-item {
             display: block;
-            padding: 14px 24px;
+            padding: 8px 12px;
             cursor: pointer;
+            font-size: 16px;
 
             input:checked + & {
                 background-color: $color-midgrey;
