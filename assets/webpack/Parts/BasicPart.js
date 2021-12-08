@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("../Plugins/HtmlWebpackPlugin");
+const HtmlWebpackPugPlugin = require("../Plugins/HtmlWebpackPugPlugin");
 const MiniCssExtractPlugin = require("../Plugins/MiniCssExtractPlugin");
 const CleanWebpackPlugin = require("../Plugins/CleanWebpackPlugin");
 const SpriteLoaderPlugin = require("../Plugins/SpriteLoaderPlugin");
@@ -41,7 +42,8 @@ module.exports = {
         }),
         CleanWebpackPlugin({}),
         SpriteLoaderPlugin({plainSprite: true}),
-        ...HtmlWebpackPlugin(),
+        ...(new HtmlWebpackPlugin()),
+        new HtmlWebpackPugPlugin(),
     ],
     module: {
         rules: [

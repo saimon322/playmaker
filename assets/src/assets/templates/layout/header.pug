@@ -8,7 +8,7 @@ header.header
     .header__layout.js-layout
     .header__menu.js-menu
         .header__top
-            .container-small
+            .container
                 .header__inner
                     include ../components/socials
                     include ../components/menu-top
@@ -17,11 +17,12 @@ header.header
                     else
                         include ../components/account-top-logout
         .header__main.dark
-            a(href="/" class="header__logo" title="Главная")
-                +icon('logo', 'icon--logo', 75, 35)
-            button(class="header__close js-close-menu")
-                +icon('close', 'icon--close', 36, 36)
-            include ../components/menu-main
-            include ../components/search
-            a(href="#" class="header__forecasts js-show-forecasts") Прогнозы
-                +icon('angle-down', 'icon--angle-down', 10, 6)
+            .container
+                a(href="/" class="header__logo" title="Главная")
+                    +icon('logo', 'icon--logo', 75, 35)
+                button(class="header__close js-close-menu")
+                    +icon('close', 'icon--close', 36, 36)
+                include ../components/menu-main
+                include ../components/search
+                a(href="#" class="header__forecasts js-show-forecasts") Прогнозы
+                    +icon('angle-down', 'icon--angle-down', 10, 6)

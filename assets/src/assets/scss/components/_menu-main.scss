@@ -1,7 +1,7 @@
 .main {
     &-nav {
         @include media-up(xl) {
-            flex: 1;
+            margin: 0 auto;
             height: 60px;
         }
     }

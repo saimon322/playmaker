@@ -1,20 +1,31 @@
-const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
-module.exports = (dir = path.join("src", "assets", "templates", "pages")) => {
-    return fs.readdirSync(dir, "utf8")
-        .map(item => {
-            const parts = item.split('.')
-            const name = parts[0]
-            const extension = parts[1]
+class HtmlWebpackPluginConfig {
+    dir = 'assets/templates/pages'
 
-            return new HtmlWebpackPlugin({
-                filename: `${name}.html`,
-                inject: 'head',
-                title: "Webpack",
-                template: `!!pug-loader!${dir}/${name}.${extension}`,
-                minimize: false
+    getPlugins() {
+        return fs.readdirSync(path.resolve('src', this.dir), "utf8")
+            .map(item => {
+                const parts = item.split('.')
+                const name = parts[0]
+                const extension = parts[1]
+
+                return new HtmlWebpackPlugin({
+                    filename: `${name}.html`,
+                    inject: 'head',
+                    title: "Webpack",
+                    template: `${this.dir}/${name}.${extension}`,
+                    minify: false
+                })
             })
-        })
+    }
+
+    constructor(dir = 'assets/templates/pages') {
+        this.dir = dir
+        return this.getPlugins()
+    }
 }
+
+module.exports = HtmlWebpackPluginConfig

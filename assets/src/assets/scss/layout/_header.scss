@@ -133,16 +133,22 @@
 
     &__main {
         width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
         font-size: 14px;
         font-family: $extra-font;
         font-weight: 500;
 
-        @include media-up(xl) {
+        .container {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
 
+        @include media-up(xl) {
+            //max-width: 1296px;
+            //margin: 0 auto;
+            //padding: 0 16px;
+            //width: 100%;
         }
 
         &-nav {
@@ -164,7 +170,7 @@
 
         @include media-up(xl) {
             order: unset;
-            margin: 12.5px 20px;
+            margin: 12.5px 0;
         }
 
         .dark & {
