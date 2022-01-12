@@ -168,23 +168,24 @@
             position: absolute;
             top: 8px;
             right: 10px;
+            width: 50%;
 
             @include media-up(md) {
                 //max-width: 140px;
             }
 
             select + .select-selected {
-                width: 144px;
+                //width: 144px;
                 padding: 4px 22px 4px 8px;
                 border: 1px solid $color-monowhite;
                 color: $color-grey;
                 font-size: 14px;
                 height: auto;
                 font-weight: normal;
+                width: 100%;
 
                 @include media-up(md) {
                     font-weight: 600;
-                    width: 150px;
                 }
 
                 &:after {
