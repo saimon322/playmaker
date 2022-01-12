@@ -6,7 +6,7 @@ form.form.account-sidebar.js-sidebar-form#profile
                 label(for="avatar" class="account-avatar__label")
                     +icon('plus-circle', 'icon--plus-circle', 48, 48)
                     | Заменить фотографию
-                input(type="file" name="avatar" id="avatar")
+                input(type="file" name="avatar" id="avatar" accept=".png, .jpg, .jpeg")
         .account-row.row.info
             .row__item
                 span.row__item-title Ранг

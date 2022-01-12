@@ -40,8 +40,6 @@ export default function () {
                 input.classList.contains('valid') && input.classList.remove('valid');
             }
 
-            console.log(isFieldsValid(elements));
-
             if (isFieldsValid(elements)) {
                 input.toggleAttribute('disabled');
 
