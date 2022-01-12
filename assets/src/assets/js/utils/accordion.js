@@ -13,11 +13,19 @@ export default function () {
                 e.target.textContent = e.target.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
             }
 
+            if (e.target.closest('.card__wrapper')) {
+                e.target.textContent = e.target.textContent === 'Смотреть результаты' ? 'Свернуть' : 'Смотреть результаты';
+            }
+
             for (let i = 0; i < accordionBtns.length; i++) {
                 !accordionBtns[i].contains(e.target) && accordionBtns[i].classList.remove('active');
 
                 if (accordionBtns[i].closest('.comments__block') && !accordionBtns[i].contains(e.target)) {
                     accordionBtns[i].textContent = 'Развернуть';
+                }
+
+                if (accordionBtns[i].closest('.card__wrapper') && !accordionBtns[i].contains(e.target)) {
+                    accordionBtns[i].textContent = 'Смотреть результаты';
                 }
             }
 
