@@ -1,7 +1,12 @@
 form.form.account-sidebar.js-sidebar-form#profile
     .account-info.bordered
         .account-avatar
-            img(src=require('@images/user.jpg'))
+            img(class="account-avatar__image" src=require('@images/none.jpg'))
+            .account-avatar__upload
+                label(for="avatar" class="account-avatar__label")
+                    +icon('plus-circle', 'icon--plus-circle', 48, 48)
+                    | Заменить фотографию
+                input(type="file" name="avatar" id="avatar")
         .account-row.row.info
             .row__item
                 span.row__item-title Ранг

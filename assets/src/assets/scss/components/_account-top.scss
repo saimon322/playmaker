@@ -179,7 +179,7 @@
                 margin: 0 8px;
                 color: $color-midgrey;
                 transition: transform 0.3s;
-                
+
                 .active & {
                     transform: rotate(-180deg);
                 }
@@ -203,6 +203,9 @@
         visibility: hidden;
         transform: translateY(10px);
 
+        @include media-up(xl) {
+            min-width: 250px;
+        }
 
         &.active {
             opacity: 1;

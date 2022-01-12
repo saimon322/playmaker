@@ -39,3 +39,4 @@ import "@icons/vk.svg";
 import "@icons/tw.svg";
 import "@icons/gg.svg";
 import "@icons/ya.svg";
+import "@icons/plus-circle.svg";

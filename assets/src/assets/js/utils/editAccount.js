@@ -4,6 +4,7 @@ export default function () {
     const editAccount = document.querySelector('.js-edit-account');
     const sidebarForm = document.querySelector('.js-sidebar-form');
     const phoneFields = document.querySelectorAll('[type="tel"]');
+    const upload = document.querySelector('.account-avatar__upload');
 
     const isFieldsValid = fields => {
         return [...fields].every(field => {
@@ -24,13 +25,24 @@ export default function () {
     editAccount && editAccount.addEventListener('click', e => {
         e.preventDefault();
 
-        [...sidebarForm.elements].forEach(input => {
+        const uploadStyles = getComputedStyle(upload);
+        const elements = sidebarForm.querySelectorAll('.form__input')
+
+        if (uploadStyles.display === "none") {
+            upload.style.display = "block";
+        } else {
+            upload.style.display = "none";
+        }
+
+        elements.forEach(input => {
 
             if (input.validity.valid) {
                 input.classList.contains('valid') && input.classList.remove('valid');
             }
 
-            if (isFieldsValid(sidebarForm.elements)) {
+            console.log(isFieldsValid(elements));
+
+            if (isFieldsValid(elements)) {
                 input.toggleAttribute('disabled');
 
                 if (!editAccount.classList.contains('save')) {

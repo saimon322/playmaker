@@ -20,8 +20,8 @@ module.exports = {
     },
     output: {
         path: dirs.dist,
-        filename: 'assets/js/[name].bundle.js',
-        publicPath: "/",
+        filename: './assets/js/[name].bundle.js',
+        publicPath: "auto",
         assetModuleFilename: '[path][name][ext]'
     },
     resolve: {
@@ -38,7 +38,7 @@ module.exports = {
     },
     plugins: [
         MiniCssExtractPlugin({
-            filename: "assets/css/style.css",
+            filename: "./assets/css/style.css",
         }),
         CleanWebpackPlugin({}),
         SpriteLoaderPlugin({plainSprite: true}),
