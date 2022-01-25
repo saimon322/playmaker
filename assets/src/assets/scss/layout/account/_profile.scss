@@ -260,7 +260,7 @@
         @include media-up(xl) {
             margin: 24px 0 12px;
             order: unset;
-            width: auto;
+            width: 100%;
         }
 
         .logout & {
