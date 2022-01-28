@@ -3,12 +3,6 @@ export default function () {
     const copyLink = document.querySelector('.js-link-copy');
     const codeFields = document.getElementsByClassName('code__field-input');
 
-    if (navigator.clipboard) {
-
-        console.log('Clipboard API available');
-
-    }
-
     function copyToClipboard(field, value, fields) {
         if (field.type === 'text') field.select();
         if (field.type === 'text') field.setSelectionRange(0, 99999);

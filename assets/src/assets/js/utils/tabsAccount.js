@@ -8,6 +8,8 @@ export default function () {
     const results = document.querySelector('.js-results');
     const bp1200 = window.matchMedia('(min-width: 1200px)');
 
+    const codes = document.querySelector('.js-codes');
+
     const handleTransferSidebarIntoTabs = (bp) => {
         if (bp.matches) {
             results.contains(sidebarForm) && account.prepend(sidebarForm);
@@ -34,9 +36,32 @@ export default function () {
     handleTransferSidebarIntoTabs(bp1200);
     bp1200.onchange = handleTransferSidebarIntoTabs;
 
+    // const handleCodesScroll = el => {
+    //     let h = 0;
+    //     const fields = el.children;
+    //
+    //     for (let i = 0; i < 3; i++) {
+    //         const styles = window.getComputedStyle(fields[i]);
+    //         h += fields[i].scrollHeight + parseFloat(styles.marginTop);
+    //     }
+    //
+    //     if (fields.length > 3) {
+    //         el.style.height = h + 'px';
+    //     } else {
+    //         el.hasAttribute('style') && el.removeAttribute('style');
+    //     }
+    // }
+
     [...tabsLinks].forEach(link => {
         link.addEventListener('click', e => {
-            tabs(e, tabsLinks, tabsPanels)
+            tabs(e, tabsLinks, tabsPanels);
+
+            // if (codes) {
+            //     handleCodesScroll(codes);
+            //     window.addEventListener('resize', () => {
+            //         handleCodesScroll(codes);
+            //     });
+            // }
         });
     });
 }

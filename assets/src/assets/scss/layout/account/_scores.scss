@@ -92,6 +92,33 @@
         width: auto;
     }
 
+    &__wrapper {
+        display: block;
+        width: 100%;
+        overflow-y: auto;
+        max-height: 162px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+
+            &-track {
+                background-color: rgba($color-main, 0.1);
+            }
+
+            &-thumb {
+                background-color: rgba($color-main, 0.3);
+            }
+        }
+
+        @include media-up(sm) {
+            max-height: 164px;
+        }
+
+        @include media-up(lg) {
+            max-height: 168px;
+        }
+    }
+
     &.has-code {
         flex-wrap: wrap;
 
