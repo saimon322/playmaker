@@ -14,8 +14,8 @@ export default function () {
 
         // Mouse drag
         const mouseDownHandler = function (e) {
-            pos.left = content.scrollLeft,
-                pos.x = e.clientX;
+            pos.left = content.scrollLeft;
+            pos.x = e.clientX;
 
             document.addEventListener('mousemove', mouseMoveHandler);
             document.addEventListener('mouseup', mouseUpHandler);
