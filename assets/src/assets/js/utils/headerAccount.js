@@ -15,7 +15,7 @@ export default function () {
     });
 
     document.addEventListener('click', e => {
-        if (!accountDropdown.contains(e.target) && !showAccountDropdown.contains(e.target)) {
+        if (accountDropdown && !accountDropdown.contains(e.target) && !showAccountDropdown.contains(e.target)) {
             showAccountDropdown.classList.remove('active');
             accountDropdown.classList.remove('active');
         }
