@@ -35,7 +35,7 @@
         align-items: center;
         margin-bottom: 16px;
 
-        @include media-up(lg) {
+        @include media-up(md) {
             margin-bottom: 36px;
         }
 
@@ -113,13 +113,17 @@
         display: flex;
         align-items: center;
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 40px;
         order: 1;
 
         @include media-up(md) {
             order: unset;
             margin-bottom: 0;
             width: auto;
+            //margin-right: 36px;
+        }
+
+        @include media-up(xl) {
             margin-right: 36px;
         }
     }
@@ -152,16 +156,49 @@
         }
     }
 
+    &__header {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 8px);
+        width: 100%;
+        color: $color-midgrey;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 600;
+
+        @include media-up(md) {
+            bottom: calc(100% + 10px);
+        }
+
+        &--mobile {
+            display: block;
+
+            @include media-up(md) {
+                display: none;
+            }
+        }
+    }
+
     &__teams {
         display: flex;
         flex-wrap: wrap;
         flex: 1;
         margin-right: 8px;
 
+        span {
+            display: none;
+        }
+
         @include media-up(md) {
+            position: relative;
             margin-right: 0;
             width: 140px;
             flex: unset;
+
+            span {
+                display: block;
+            }
         }
 
         @include media-up(lg) {
@@ -238,6 +275,12 @@
 
         &-item {
             padding: 4px 8px;
+            position: relative;
+            font-size: 14px;
+
+            span {
+                text-align: center;
+            }
 
             &:not(:last-child) {
                 margin-right: 8px;
