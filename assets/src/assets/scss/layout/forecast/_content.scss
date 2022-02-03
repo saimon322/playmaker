@@ -307,6 +307,16 @@
             flex-wrap: wrap;
             margin-bottom: 24px;
 
+            .account-statistics {
+                margin-top: 0;
+                margin-left: 0;
+                margin-bottom: 24px;
+
+                @include media-up(md) {
+                    margin-bottom: 16px;
+                }
+            }
+
             &-title {
                 display: inline-block;
                 margin-bottom: 4px;
