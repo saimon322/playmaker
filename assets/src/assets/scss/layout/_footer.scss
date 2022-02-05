@@ -1,0 +1,159 @@
+.footer {
+    background-color: $color-main;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 1.4;
+    
+    a {
+        &:not([class]) {
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+
+    &__main {
+        padding: 24px 0;
+
+        @include media-up(md) {
+            padding: 40px 0;
+        }
+    }
+
+    &__inner {
+        @include media-up(lg) {
+            display: flex;
+        }
+    }
+
+    &__column {
+        margin-bottom: 28px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid $color-grey;
+
+        &:last-child {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        @include media-up(lg) {
+            flex: 1;
+            padding-right: 28px;
+            margin-right: 28px;
+            border-right: 1px solid $color-grey;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            border-bottom: none;
+
+            &:last-child {
+                flex: unset;
+                padding-right: 0;
+                margin-right: 0;
+                border-right: none;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        position: relative;
+        display: inline-block;
+
+        @include media-up(md) {
+            margin-bottom: 16px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 1px;
+            background-color: $color-purple;
+        }
+    }
+
+    &__text {
+        & > * {
+            margin-bottom: 12px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include media-up(md) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &__socials {
+        margin-bottom: 28px;
+
+        @include media-up(md) {
+            margin-bottom: 44px;
+        }
+    }
+
+    &__apps {
+        display: flex;
+
+        &-link {
+            color: $color-monochrome;
+            transition: color 0.25s;
+
+            &:not(:last-child) {
+                margin-right: 16px;
+            }
+
+            &:hover {
+                color: $color-purple;
+            }
+        }
+    }
+
+    &__bottom {
+        padding: 16px 0 24px;
+        border-top: 1px solid $color-grey;
+
+        @include media-up(md) {
+            padding: 20px 0 30px;
+        }
+
+        .footer__text {
+            color: $color-midgrey;
+
+            @include media-up(lg) {
+                flex: 1;
+            }
+        }
+    }
+
+    &__development {
+        font-size: 14px;
+        margin-top: 16px;
+        display: block;
+
+        br {
+            display: none;
+        }
+
+        @include media-up(lg) {
+            margin-top: 0;
+            text-align: center;
+            margin-left: 44px;
+
+            br {
+                display: inline-block;
+            }
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+}

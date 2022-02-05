@@ -40,3 +40,5 @@ import "@icons/tw.svg";
 import "@icons/gg.svg";
 import "@icons/ya.svg";
 import "@icons/plus-circle.svg";
+import "@icons/as.svg";
+import "@icons/gp.svg";

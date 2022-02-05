@@ -11,5 +11,5 @@
 ul(class="socials" + (socialsClass ? ' ' + socialsClass : ''))
     each icon in icons
         li.socials__item
-            a(href="#" class="socials__item-link")
+            a(href="#" class="socials__item-link" target="_blank")
                 +icon(icon.name, 'icon--' + icon.name, icon.w, icon.h)

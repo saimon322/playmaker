@@ -1,0 +1,47 @@
+- socialsClass = 'footer__socials'
+
+footer.footer
+    .footer__main
+        .container
+            .footer__inner
+                .footer__column.footer__about
+                    h3.page-title.footer__title О проекте
+                    .footer__text
+                        p «ПЛЕЙМЕЙКЕР» (playmaker24.ru) – спортивное информационно-развлекательное сетевое издание
+                            br
+                            | Главный редактор: Сычев М.В.
+                            br
+                            | Регистрация СМИ: ЭЛ № ФС 77 — 79142 от 15 сентября 2020 г. выдано Федеральной службой по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор)
+                            br
+                            | Учредитель: Общество с ограниченной ответственностью «Оскар Ярд Медиа»
+                        p 18+ Для лиц старше 18 лет
+                .footer__column.footer__contacts
+                    h3.page-title.footer__title Контакты
+                    .footer__text
+                        p Email редакции СМИ:
+                            |
+                            |
+                            a(href="mailto:letters@playmaker24.ru") letters@playmaker24.ru
+                            br
+                            | Адрес редакции: 125196 Москва, ул. Лесная д. 3, этаж 2, пом. III, ком 20
+                .footer__column.footer__links
+                    h3.page-title.footer__title Соцсети
+                    include ../components/socials
+                    h3.page-title.footer__title Наше приложение
+                    .footer__apps
+                        a(href="" class="footer__apps-link" target="_blank")
+                            +icon('gp', 'icon--gp', 135, 40)
+                        a(href="" class="footer__apps-link" target="_blank")
+                            +icon('as', 'icon--as', 120, 40)
+    .footer__bottom
+        .container
+            .footer__inner
+                .footer__text
+                    p Любое использование материалов допускается только при соблюдении правил перепечатки и при наличии гиперссылки на PLAYMAKER24.ru.
+                        br
+                        | Новости, аналитика, прогнозы и другие материалы, представленные на данном сайте, не являются офертой или рекомендацией к покупке или продаже каких-либо активов
+                span.footer__development made in
+                    br
+                    |
+                    |
+                    a(href="#" target="_blank") OnePix
